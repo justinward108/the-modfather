@@ -1,0 +1,475 @@
+Ability Thief | Power-gaining, Informative
+Absentee Voter | Protective
+Absorber | Passive, Power-gaining
+Actor | Voting
+Actress | Misleading, Informative, Role Reveal
+Addictive Cop | Informative, Misleading
+Adrenalin Junkie | Protective, Passive
+Alarmist | Support
+Alert Townie | Informative, Passive
+Alien | Protective, Manipulative
+Alignment Cop | Informative
+Ambulance Driver | Informative
+Amnesiac | Third Party, Role-changing
+Amnesiac Cop | Informative, Linked
+Amplifier | Support
+Anarchist | Killing, Third Party
+Ancient | Passive
+Anti-Doctor | Killing
+Apportioner | Protective
+Architect | Communicative, Multi-targeting
+Armorsmith | Protective, Support
+Arms Dealer | Manipulative, Killing
+Arsonist | Killing, Third Party
+Ascetic | Passive, Protective
+Asceticiser | Support, Protective
+Asshole | Protective
+Associate | Misleading
+Astronomer | Manipulative
+Asylum Doctor | Protective, Manipulative
+Atheist | Third Party
+Attention Seeker | Manipulative, Redirection
+Avenger | Killing
+Avoider | Manipulative
+Babysitter | Protective
+Backup | Passive, Support, Linked
+Baker | Support
+Bartender | Manipulative
+Beguiler | Redirection, Protective
+Berserker | Killing
+BFF | Linked
+Big Brother | Informative, Mass Effect
+Black Goo | Passive, Role-changing, Third Party
+Black Hat | Manipulative, Mass Effect, Role Reveal
+Blackjack | Mass Effect, Role-changing
+Blob | Third Party, Mission, Passive
+Bodyguard | Protective
+Bodyguard Boss | Protective, Manipulative, Multi-targeting
+Bodyguard Jailkeeper | Protective, Manipulative
+Bomb | Killing, Passive
+Bomb Defuser | Protective
+Boogeyman | Killing, Third Party, Mission
+Bounty Hunter | Third Party, Mission, Killing
+Brainshocker | Redirection
+Bulletproof | Protective, Passive
+Bulletproof Avoider | Protective
+Bumbling Cop | Killing, Misleading
+Burglar | Manipulative, Role-changing
+Bus Driver | Redirection, Multi-targeting
+Businessman | Support
+Bystander | Passive, Misleading
+Cannibal | Killing, Third Party
+Cannibal Baker | Support, Killing
+Cannoneer | Support, Passive, Mass Effect
+Captain | Manipulative
+Caroler | Informative, Support
+Chief of Police | Informative
+Child Murderer | Killing, Passive
+Claim Vigilante | Killing
+Clairvoyant | Informative
+Clockmaker | Mission, Killing, Third Party
+Colorblind Cop | Informative
+Command Based Robot | Multi-power
+Communication Cop | Informative
+Communist | Mission, Third Party
+Commuter | Protective
+Companion | Protective, Redirection
+Confidant | Informative
+Confirmation Cop | Informative
+Consigliere | Misleading
+Conspiracy Theorist | Informative
+Converter | Role-changing
+Cop | Informative
+Cop Invalidator | Manipulative
+Copycat | Multi-power, Multi-targeting
+Coroner | Informative
+CPR Doctor | Protective, Killing
+Crazy Old Man | Misleading
+Creepy Girl | Mission, Third Party
+Crippler | Killing
+Cult Leader | Manipulative, Mission, Role-changing, Third Party
+Cultist | Third Party
+Cupid | Role-changing, Communicative
+Cycle Doctor | Protective
+Dealmaker | Misleading, Support
+Death Miller | Passive, Role Reveal
+Death Tailor | Misleading, Role Reveal
+Deathproof | Protective, Passive
+Deceiver | Misleading, Role Reveal
+Decoy | Misleading
+Deflector | Redirection, Multi-targeting
+Delayed Vigilante | Killing
+Deprogrammer | Role-changing, Support
+Deputy | Informative
+Desperado | Killing
+Deva | Manipulative
+Disguiser | Misleading, Role-changing, Role Reveal
+DNA Analyst | Informative
+Doctor | Protective
+Doctor Boom | Passive, Killing
+Don | Killing, Passive, Support, Mass Effect
+Doppelgänger | Misleading, Linked, Passive
+Double Agent | Killing, Third Party
+Doublevoter | Voting
+Dreamer | Informative
+Duelist | Killing
+Duke | Voting, Mass Effect
+Duplicate | Power-gaining
+Electrician | Informative, Passive
+Electromaniac | Killing
+Emissary | Informative, Passive
+Enabler | Passive, Support
+Enchantress | Informative
+Encryptor | Communicative, Passive, Support, Mass Effect
+Escape Artist | Voting, Passive, Role Reveal
+Evangelistic Townie | Passive, Misleading
+Evil Mastermind | Killing, Role-changing, Communicative, Third Party, Linked
+Evil Minion | Communicative, Killing, Third Party, Linked
+Executioner B | Killing, Voting
+Fabricator | Misleading
+Faith Healer | Protective
+False Inventor | Misleading
+Fat Townie | Protective, Passive
+FBI Agent | Informative
+Fiddler | Manipulative
+Firearms Inspector | Informative
+Firefighter | Protective
+Fisherman | Multi-power
+Fixer | Support
+Flavor Cop | Informative
+Fog | Mass Effect, Support
+Follower | Informative
+Forensic Investigator | Informative
+Forensic Scientist | Passive, Support, Mass Effect, Role Reveal
+Forger | Manipulative
+Forgetful Townie | Other
+Framer | Misleading
+Freelancer | Mission, Third Party
+Freezer | Manipulative
+Friendly Neighbor | Informative
+Friendly Neighborizer | Communicative
+Frontrunner | Third Party, Mission
+Fruit Vendor | Informative
+Gallis | Voting, Passive
+Gambler | Mission, Power-gaining
+Ghost | Informative
+Gladiator | Voting
+Godfather | Passive, Misleading
+Governor | Voting
+Gramps | Passive, Protective, Informative
+Gravedigger | Passive, Misleading
+Great Teacher | Role-changing, Support
+Green Goo | Passive, Role-changing
+Guardian Angel | Mission, Third Party, Protective, Linked
+Gunsmith | Support, Killing
+Hacker | Informative
+Hammerer | Voting, Passive
+Hated | Passive, Voting
+Healer | Protective
+Hero | Passive, Killing
+Hider | Informative, Protective
+Hippie | Passive, Role-changing
+Hirsute Townie | Passive, Misleading
+Hitman | Support
+Hobo | Informative, Passive
+Hollow Man | Passive
+Hoodlum | Third Party, Mission
+Hot Potato | Manipulative
+Hunter | Killing
+Hypnotist | Informative
+Hypochondriac | Other
+Illusionist | Killing, Misleading
+Immunizer | Protective, Support
+Inactivity Vigilante | Killing
+Indecisive Voter | Voting
+Innocence Cop | Informative
+Innocent Child | Informative
+Inquisitor | Killing, Role-changing, Third Party
+Insane Cop | Misleading, Informative
+Insane Doctor | Protective, Killing
+Insomniac | Informative, Passive
+Interceptor | Killing, Manipulative
+Inventor | Support
+ITA Doctor | Protective
+ITA Master | Killing
+ITA Nerfer | Support
+ITA Sniper | Killing
+ITA Trainer | Support
+Item Thief | Manipulative
+Jack of All Trades | Multi-power
+Jailkeeper | Protective, Manipulative
+Janitor | Manipulative, Role Reveal
+Jester | Mission, Passive, Third Party
+Jester Scum | Passive, Misleading, Role Reveal
+John Doe | Informative
+Joker | Role-changing, Power-gaining
+Journalist | Posting
+Judas | Passive, Role-changing
+Judge | Killing
+Judicator | Protective, Manipulative
+Keymaker | Protective, Support
+Kidnapper | Communicative
+Killjoy | Role-changing, Support
+King | Voting
+Kingmaker | Voting
+Late Townie | Other
+Lawyer | Misleading
+Lazy Vigilante | Killing
+Leader | Passive, Mass Effect
+Legal Archivist | Informative
+Leprechaun | Redirection, Multi-targeting
+Lie Detector | Informative
+Lightning Rod | Redirection
+Little Girl | Informative, Passive
+Loner | Other
+Lost Mason | Linked, Communicative, Passive
+Lottery Winner | Passive, Support
+Loudmouth | Passive
+Loved | Passive, Voting
+Lover | Communicative, Linked
+Lumberjack | Role-changing
+Lycan | Third Party, Killing
+Elimination Bait | Passive, Mass Effect
+Eliminated | Mission, Linked
+Executioner BA | Mission, Linked, Third Party
+Lynchproof | Protective
+Macho Cop | Informative
+Mad Gunman | Killing
+Mad Scientist | Role-changing
+Mafia Goon | Other
+Magistrate | Voting
+Magnet | Redirection
+Martyr | Mass Effect, Killing, Protective
+Mason | Communicative, Linked
+Mason Finder | Linked, Communicative
+Masonizer | Communicative
+Mass Murderer | Killing, Third Party
+Match Finder | Informative
+Mediator | Multi-power, Protective, Manipulative
+Medicine Man | Misleading
+Medium | Communicative, Informative
+Megaman | Killing, Role-changing, Power-gaining
+Mentalist | Informative, Multi-targeting
+Messenger | Communicative
+Methodical Cop | Informative
+Miller | Passive, Misleading
+Millionaire | Other
+Mime | Mission, Communicative, Third Party
+Mimic | Role-changing, Informative
+Mind Controller | Redirection
+Mirror | Passive, Redirection
+Mirror Maker | Redirection, Killing
+Mistletoe | Mission, Third Party, Informative, Multi-targeting
+Modifier | Manipulative, Support
+Modposter | Posting
+Monitor | Informative
+Monk | Third Party, Mission, Protective
+Moon Wolf | Third Party, Killing
+Morpher | Misleading
+Mortician | Informative, Role Reveal
+Motion Detector | Informative
+Motivator | Support
+Mugger | Power-gaining
+Multi Doctor | Protective
+Muse | Support, Passive
+Mute | Voting
+Mystic | Informative
+Naive Cop | Informative, Misleading
+Naive Doctor | Protective, Misleading
+Neapolitan | Informative
+Necromancer | Support
+Neighbor | Communicative
+Neighborhood Watchman | Informative, Communicative, Linked
+Neighborizer | Communicative
+Neutralizer | Informative, Killing
+Nexus | Passive, Redirection
+Ninja | Passive, Misleading
+Ninja Baker | Support
+Normalizer | Manipulative, Role-changing
+Nurse | Protective
+Nymphomaniac | Communicative
+Observer | Informative
+Old Man | Other
+Oracle | Informative
+Pacifist | Protective, Manipulative, Mass Effect
+Paparazzi | Informative
+Paralyzer | Voting, Mass Effect
+Paranoid Bat Owner | Passive, Manipulative
+Paranoid Cop | Informative, Misleading
+Paranoid Doctor | Protective, Manipulative, Misleading
+Paranoid Gun Owner | Passive, Killing
+Parasite | Misleading
+Parity Cop | Informative
+Parrot | Power-gaining
+Party Host | Communicative, Mass Effect
+Pathologist | Informative
+Peeping Tom | Informative
+Penguin | Informative
+Personal Bodyguard | Protective, Passive, Linked
+Pirate Baker | Support, Manipulative
+Points Sacrificer | Multi-power
+Poisoner | Killing
+Police Commissioner | Informative
+Politician | Voting, Third Party, Role-changing
+Pollster | Voting, Mass Effect
+Pope | Protective, Mass Effect
+Possessor | Role-changing
+President | Linked
+Pretender | Role-changing, Multi-power, Power-gaining
+Priest | Protective
+Princess | Passive, Mass Effect
+Private Investigator | Informative
+Probate Lawyer | Support, Passive, Mass Effect
+Prober | Informative, Manipulative
+Producer | Informative
+Prophet | Mission, Third Party
+Protector | Support
+Proxy | Informative, Passive, Linked
+Pseudojester | Role-changing, Mission, Third Party
+Psychiatrist | Support, Role-changing
+Psychic | Informative, Passive
+Psychopath | Killing
+Psychotrooper | Misleading, Passive, Third Party, Mass Effect
+Puppet Master | Redirection, Multi-targeting
+Purple Goo | Passive, Role-changing, Manipulative
+Rabble Rouser | Voting, Passive, Mass Effect
+Radiant | Passive, Manipulative, Redirection
+Random Cop | Informative, Misleading
+Randomizer | Redirection
+Ranger | Multi-power
+Recharger | Support
+Recruiting Mason | Communicative, Role-changing, Informative
+Red Goo | Passive, Communicative
+Redirector | Redirection
+Reflector | Redirection
+Reflexive Doctor | Passive, Protective
+Replicator | Misleading, Power-gaining, Role Reveal
+Reporter | Informative
+Restless Spirit | Voting
+Retired Marine | Passive, Protective
+Retired Werewolf Hunter | Passive, Protective
+Revealer | Support, Role Reveal
+Riddler | Killing, Third Party
+Ritualist | Support
+Rogue | Power-gaining, Informative
+Role Cop | Informative
+Role Oracle | Informative
+Role Reverser | Manipulative
+Role Swapper | Manipulative, Role-changing, Multi-targeting
+Role Thief | Informative, Power-gaining
+Roleblocker | Manipulative
+Roleblocker Bodyguard | Informative, Protective, Manipulative
+Rolestopper | Protective, Manipulative
+Saboteur | Manipulative, Killing
+Saint | Voting
+Santa | Informative, Support, Multi-targeting, Multi-power
+Sasquatch | Passive, Role-changing
+Saulus | Passive, Role-changing
+Savior | Mission, Passive, Role-changing
+Scapegoat | Voting, Passive
+Scavenger | Multi-power, Informative, Power-gaining, Role Reveal
+Schizophrenic | Multi-power
+Scrambler | Misleading
+Secret Service Agent | Linked, Killing
+Secretary | Manipulative
+Security Man | Informative
+Seer | Informative
+Senator | Voting
+Sensei | Manipulative, Support
+Sensor | Informative
+Seraph Knight | Protective
+Serial Killer | Killing
+Shaman | Support
+Shapeshifter | Misleading, Role Reveal
+Sheriff | Informative, Killing, Multi-power
+Shrink | Role-changing, Support
+Silencer | Manipulative
+Silversmith | Role-changing, Killing, Passive
+Siren | Third Party, Mission, Killing
+Slave | Misleading, Linked, Passive
+Slave Master | Misleading, Linked
+Sleepwalker | Misleading
+Sleuth | Informative
+Snoop | Informative
+Sorcerer | Informative
+Soul Linker | Killing, Multi-targeting
+Soul Stealer | Manipulative
+Spartacus | Other
+Sponge | Redirection, Support, Passive
+Squasher | Killing
+Stalker | Informative
+Steadfast Townie | Passive
+Strongman | Killing
+Subscriber | Other
+Suicide Bomber | Killing
+Super Backup | Multi-power, Power-gaining
+Super Commandant | Informative, Protective
+Super Godfather | Passive
+Super Saint | Killing, Passive
+Surgeon | Protective
+Survivalist | Killing, Protective
+Survivor | Mission, Third Party
+Switch | Support, Manipulative
+Tactician | Support
+Tailor | Misleading
+Taxi Driver | Redirection, Multi-targeting
+Tentacled Townie | Passive, Misleading
+Therapist | Manipulative
+Thug | Voting
+Time Bandit | Manipulative, Support
+Time Freezer | Manipulative
+Time Killer | Killing, Support
+Time Mage | Manipulative
+Time Protector | Protective, Manipulative
+Time Traveller | Informative
+Tinkerer | Killing
+Tooth Fairy | Informative
+Torturer | Protective, Manipulative, Killing, Communicative
+Town Drunk | Posting
+Toxic Goo | Passive, Killing
+Tracker | Informative
+Traffic Controller | Redirection, Multi-targeting
+Traitor | Mission
+Traitor Finder | Support
+Trapper | Killing
+Tree Stump | Passive, Voting
+Triplevoter | Voting
+Turncoat | Role-changing
+Undercover Cop | Protective, Informative
+Underdog | Third Party, Mission, Role-changing
+Universal Backup | Support, Role-changing, Power-gaining
+Universal Miller | Passive, Misleading
+Unlyncher | Mission, Third Party
+Usurper | Mission
+Vampire Lord | Role-changing, Third Party
+Vanilla Cop | Informative
+Vanilla Townie | Other
+Vanillaizer | Manipulative, Role-changing
+Vengeful Sibling | Mission, Third Party, Communicative, Linked
+Ventriloquist | Manipulative
+Victim | Redirection, Support, Protective
+Vigilante | Killing
+VIP | Protective, Killing
+Virgin | Passive, Mass Effect
+Virus | Third Party, Killing
+Voodoo Lady | Mission, Killing
+Voodooist | Role-changing, Mission, Third Party
+Vote Cop | Informative
+Vote Manipulator | Voting
+Votebuyer | Voting
+Voyeur | Informative
+Voyeur Guesser | Informative
+Warlock | Mission, Third Party
+Watcher | Informative
+Watchlisted Townie | Passive, Misleading
+Weak Doctor | Protective
+Werewolf | Other
+White Mage | Protective
+Wildcard | Multi-power, Informative
+Wish Granter | Support
+Witch | Manipulative, Redirection, Third Party
+Witness | Informative
+Wizard | Multi-power
+Yakuza | Role-changing
+Yellow Goo | Passive, Role-changing, Manipulative
+Zombie | Mission, Third Party

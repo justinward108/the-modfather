@@ -1,0 +1,22 @@
+[Unit]
+Description=The Modfather (Mafia GM bot + theme dashboard)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=modfather
+WorkingDirectory=/opt/modfather/app
+Environment=MODFATHER_ENV=/opt/modfather/app/.env
+ExecStart=/opt/modfather/venv/bin/python -m modfather
+Restart=on-failure
+RestartSec=5
+# hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/modfather/data
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

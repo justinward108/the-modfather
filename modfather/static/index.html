@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Modfather — Theme Builder</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎭</text></svg>">
+<style>
+:root{
+  --bg:#121014; --panel:#1b181e; --panel2:#231f27; --line:#332d38; --text:#ece6ef; --mute:#9c93a3;
+  --accent:#c8423b; --accent2:#e0a43a; --ok:#58b368; --warn:#e0a43a; --bad:#e05a4f; --radius:10px;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-size:14px}
+a{color:var(--accent2)}
+button,input,select,textarea{font:inherit;color:inherit}
+button{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer}
+button:hover{border-color:#5a4f62}
+button.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+button.primary:disabled{opacity:.45;cursor:default}
+button.ghost{background:none;border-color:transparent;color:var(--mute);padding:4px 6px}
+button.ghost:hover{color:var(--text)}
+input,select,textarea{background:#141116;border:1px solid var(--line);border-radius:7px;padding:6px 8px;min-width:0}
+input:focus,select:focus,textarea:focus{outline:2px solid #6b3a38;border-color:#6b3a38}
+textarea{width:100%;resize:vertical}
+header{display:flex;align-items:center;gap:14px;padding:12px 20px;border-bottom:1px solid var(--line);background:#0e0c10;position:sticky;top:0;z-index:5}
+header h1{font-size:17px;margin:0;letter-spacing:.3px}
+header h1 span{color:var(--accent)}
+header .sp{flex:1}
+.avatar{width:28px;height:28px;border-radius:50%;vertical-align:middle}
+.layout{display:grid;grid-template-columns:250px 1fr;min-height:calc(100vh - 54px)}
+aside{border-right:1px solid var(--line);padding:16px;background:#151217}
+aside h3{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--mute);margin:18px 0 8px}
+.tlist button{display:block;width:100%;text-align:left;margin-bottom:6px;background:none}
+.tlist button.on{background:var(--panel2);border-color:#5a4f62}
+.tlist small{color:var(--mute)}
+main{padding:20px 24px 120px;max-width:1500px;min-width:0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin-bottom:16px}
+.card h2{font-size:15px;margin:0 0 12px;display:flex;align-items:center;gap:8px}
+.card h2 .sp{flex:1}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field label{display:block;font-size:12px;color:var(--mute);margin-bottom:4px}
+.field input,.field select{width:100%}
+.settings{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px 18px}
+.chk{display:flex;gap:8px;align-items:center}
+table{width:100%;border-collapse:collapse}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.7px;color:var(--mute);text-align:left;padding:6px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:6px;border-bottom:1px solid #26212a;vertical-align:top}
+td input{width:100%}
+.num{width:84px}
+.rolecell{display:flex;flex-direction:column;gap:3px;min-width:170px}
+.rolecell button{text-align:left;font-weight:600}
+.tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:999px;background:#2b2530;color:var(--mute);margin:1px 3px 1px 0}
+.tag.auto{background:#1f3a26;color:#8fdc9c}
+.tag.manual{background:#3a2f1c;color:#e8c27c}
+.chips{display:flex;flex-wrap:wrap;gap:4px;align-items:center;min-width:160px}
+.chip{background:#2d2533;border-radius:999px;padding:2px 4px 2px 9px;font-size:12px;display:inline-flex;align-items:center;gap:2px}
+.chip button{padding:0 5px;border:none;background:none;color:var(--mute)}
+.chips select{font-size:12px;padding:2px 4px}
+.pmrow{display:flex;align-items:center;gap:8px;font-size:12px}
+.pmedit{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:6px 0 4px}
+.pmprev{background:#141116;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:7px;padding:10px 12px;font-size:13px;line-height:1.45;min-height:60px}
+.fhead td{background:#201b24;padding:9px 6px;border-bottom:1px solid var(--line)}
+.facdot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.bar{position:fixed;bottom:0;left:250px;right:0;background:#0e0c10ee;border-top:1px solid var(--line);padding:10px 24px;display:flex;align-items:center;gap:14px;z-index:6;backdrop-filter:blur(4px)}
+.bar .sp{flex:1}
+.pill{padding:3px 10px;border-radius:999px;background:var(--panel2);font-size:12px}
+.pill.ok{background:#1f3a26;color:#9fe3aa}.pill.bad{background:#41201d;color:#f2a49d}
+.msg{padding:10px 14px;border-radius:8px;margin-bottom:14px}
+.msg.bad{background:#41201d;color:#f6c1bb}.msg.ok{background:#1f3a26;color:#bdeec5}
+.empty{color:var(--mute);text-align:center;padding:30px}
+.center{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:70vh;gap:14px;text-align:center}
+/* picker */
+.modal{position:fixed;inset:0;background:#000a;display:flex;align-items:flex-start;justify-content:center;padding:4vh 16px;z-index:20}
+.modal .box{background:var(--panel);border:1px solid var(--line);border-radius:14px;width:min(920px,100%);max-height:92vh;display:flex;flex-direction:column}
+.modal .head{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.modal .head input[type=search]{flex:1;min-width:200px;font-size:15px;padding:9px 12px}
+.modal .list{overflow:auto;padding:8px 16px 16px}
+.ritem{display:grid;grid-template-columns:1fr auto;gap:8px;padding:9px 4px;border-bottom:1px solid #26212a}
+.ritem b{font-size:14px}
+.ritem p{margin:3px 0 0;color:var(--mute);font-size:13px}
+.ritem p.none{font-style:italic;opacity:.7}
+.added{color:var(--ok);font-size:12px;margin-left:6px}
+.foot{color:var(--mute);font-size:12px;margin-top:30px}
+details summary{cursor:pointer;color:var(--mute);font-size:12px}
+.mono{font-family:ui-monospace,Menlo,monospace;font-size:12px}
+@media (max-width:900px){.layout{grid-template-columns:1fr}aside{border-right:none;border-bottom:1px solid var(--line)}.bar{left:0}.grid2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <h1>🎭 The Modfather <span>Theme Builder</span></h1>
+  <div class="sp"></div>
+  <div id="who"></div>
+</header>
+<div id="app"><div class="center">Loading…</div></div>
+<div id="modal"></div>
+
+<script>
+const $ = (s, el=document) => el.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const S = {user:null, guilds:[], gid:null, themes:[], theme:null, saved:null, catalog:null,
+           view:"themes", games:[], msg:null, preview:null, picker:null};
+
+async function api(path, opts={}) {
+  const r = await fetch(path, {credentials:"same-origin", ...opts,
+    headers: opts.body ? {"Content-Type":"application/json"} : {}});
+  let data = null; try { data = await r.json(); } catch {}
+  if (!r.ok) throw new Error((data && data.error) || `${r.status} ${r.statusText}`);
+  return data;
+}
+
+// ---------------------------------------------------------------- boot
+async function boot() {
+  S.catalog = await api("/api/catalog");
+  S.roleIndex = Object.fromEntries(S.catalog.roles.map(r => [r.key, r]));
+  S.modIndex = Object.fromEntries(S.catalog.modifiers.map(m => [m.key, m]));
+  try { const me = await api("/api/me"); S.user = me.user; S.guilds = me.guilds; }
+  catch { S.user = null; }
+  if (S.user && S.guilds.length) { S.gid = localStorage.getItem("gid"); if (!S.guilds.some(g => g.id === S.gid)) S.gid = S.guilds[0].id; await loadThemes(); }
+  render();
+}
+async function loadThemes() { S.themes = await api(`/api/guilds/${S.gid}/themes`); }
+async function loadGames() { S.games = await api(`/api/guilds/${S.gid}/games`); }
+
+const dirty = () => S.theme && JSON.stringify(S.theme) !== S.saved;
+window.addEventListener("beforeunload", e => { if (dirty()) { e.preventDefault(); e.returnValue = ""; } });
+
+function role(key) {
+  const c = (S.theme?.custom_roles || []).find(r => r.key === key);
+  return c ? {...c, tags: c.tags || ["Custom"], source:"custom"} : S.roleIndex[key];
+}
+
+// ---------------------------------------------------------------- render
+function render() {
+  $("#who").innerHTML = S.user
+    ? `${S.user.avatar ? `<img class="avatar" src="${esc(S.user.avatar)}">` : ""} ${esc(S.user.name)} · <a href="/logout">Log out</a>` : "";
+  if (!S.user) {
+    $("#app").innerHTML = `<div class="center"><h2>The Modfather</h2><p style="margin:-6px 0 0;font-size:16px">Build themed Mafia setups for your server</p>
+      <p style="color:var(--mute);max-width:480px">Pick roles from all ${S.catalog.roles.length} Mafia Universe roles, name the characters, and run the game with the bot.</p>
+      <a href="/login"><button class="primary">Log in with Discord</button></a></div>`;
+    return;
+  }
+  if (!S.guilds.length) {
+    $("#app").innerHTML = `<div class="center"><h2>No servers to manage</h2><p style="color:var(--mute);max-width:520px">You need <b>Manage Server</b> (or the bot's admin role set with <span class="mono">/mafia config</span>) on a server the bot is in.</p></div>`;
+    return;
+  }
+  const guildSel = `<select id="guild" style="width:100%">${S.guilds.map(g => `<option value="${g.id}" ${g.id===S.gid?"selected":""}>${esc(g.name)}</option>`).join("")}</select>`;
+  const tl = S.themes.map(t => `<button data-open="${t.id}" class="${S.theme && S.theme.id===t.id ? "on":""}">${esc(t.name)}<br><small>${t.slots} slots</small></button>`).join("") || `<div style="color:var(--mute);font-size:13px">No themes yet.</div>`;
+  $("#app").innerHTML = `<div class="layout">
+    <aside>
+      <h3>Server</h3>${guildSel}
+      <h3>Themes</h3><button class="primary" id="newTheme" style="width:100%;margin-bottom:10px">+ New theme</button>
+      <div class="tlist">${tl}</div>
+      <h3>Games</h3><button id="showGames" style="width:100%">Recent games</button>
+    </aside>
+    <main id="main"></main></div>${S.theme && S.view==="themes" ? barHTML() : ""}`;
+  renderMain();
+}
+
+function renderMain() {
+  const m = $("#main");
+  const msg = S.msg ? `<div class="msg ${S.msg.kind}">${esc(S.msg.text)}</div>` : "";
+  if (S.view === "games") { m.innerHTML = msg + gamesHTML(); return; }
+  if (!S.theme) { m.innerHTML = msg + `<div class="center"><h2>Pick a theme or start a new one</h2><p style="color:var(--mute)">A theme is a list of characters, each with a role and a faction.</p></div>`; return; }
+  const t = S.theme;
+  m.innerHTML = msg + `
+  <div class="card"><div class="grid2">
+    <div class="field"><label>Theme name</label><input data-k="name" value="${esc(t.name)}" maxlength="100"></div>
+    <div class="field"><label>Description (shown on the signup post)</label><input data-k="description" value="${esc(t.description)}" maxlength="2000"></div>
+  </div></div>
+  ${slotsHTML()}
+  ${factionsHTML()}
+  ${customHTML()}
+  ${settingsHTML()}
+  <div class="foot">Role names and type tags come from the <a href="${esc(S.catalog.source_url)}" target="_blank" rel="noopener">Mafia Universe role database</a>. Roles without a description show “No description yet” — write the role PM text yourself in the slot (“PM text”).
+  <br><button class="ghost" id="delTheme" style="color:var(--bad);margin-top:10px;padding-left:0">Delete this theme</button></div>`;
+}
+
+function fillPM(text, s) {
+  const r = role(s.role_key);
+  const mods = (s.modifiers||[]).map(k => S.modIndex[k]?.name || k);
+  const rname = [...mods, s.display_name || (r ? r.name : s.role_key)].join(" ");
+  return text.replaceAll("{character}", s.character || "(character)").replaceAll("{role}", rname)
+             .replaceAll("{faction}", s.faction).replaceAll("{player}", "@player");
+}
+function pmEditor(s, i, r) {
+  const notes = (s.pm_text.match(/\[GM:/g) || []).length;
+  const open = S.openPM && S.openPM.has(i);
+  let status;
+  if (!s.pm_text) status = `<span style="color:var(--mute)">No PM yet — players get the basic card with the ${r && r.confidence === "check" ? "<b style='color:var(--warn)'>unconfirmed</b> " : ""}starter ability text.</span>`;
+  else if (notes) status = `<b style="color:var(--warn)">${notes} GM note${notes>1?"s":""} left to edit</b>`;
+  else status = `<span style="color:var(--ok)">Custom PM ready</span>`;
+  const preview = s.pm_text ? `<div class="pmprev">${esc(fillPM(s.pm_text, s).split("\n").filter(l => !l.includes("[GM:")).join("\n")).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/\n/g, "<br>")}</div>` : "";
+  return `<div class="pmrow"><button class="ghost" data-pmtoggle="${i}">${open ? "▾" : "▸"} Role PM</button> ${status}
+      <button class="ghost" data-starter="${i}" style="margin-left:auto">${s.pm_text ? "Replace with starter PM" : "+ Insert starter PM"}</button></div>
+    ${open ? `<div class="pmedit"><div><textarea rows="9" data-s="${i}:pm_text" maxlength="3500" placeholder="Write this character's role PM. Placeholders: {character} {role} {faction} {player}">${esc(s.pm_text)}</textarea>
+      <div style="color:var(--mute);font-size:11px;margin-top:4px">Placeholders: <span class="mono">{character} {role} {faction} {player}</span>. Lines with <span class="mono">[GM: …]</span> are never sent. The bot adds how to act, teammates and vote weight below the PM.</div></div>
+      <div><div style="color:var(--mute);font-size:11px;margin-bottom:4px">What the player sees</div>${preview || `<div class="pmprev" style="color:var(--mute)">—</div>`}</div></div>` : ""}`;
+}
+function slotsHTML() {
+  const t = S.theme;
+  const facOpts = cur => t.factions.map(f => `<option ${f.name===cur?"selected":""}>${esc(f.name)}</option>`).join("");
+  let shown = 0;
+  const rowFor = (s, i) => {
+    shown += 1;
+    const r = role(s.role_key);
+    const ab = r ? r.ability : "manual";
+    const mods = (s.modifiers||[]).map(k => `<span class="chip">${esc(S.modIndex[k]?.name||k)}<button data-delmod="${i}:${k}" title="Remove">×</button></span>`).join("");
+    const modSel = `<select data-addmod="${i}"><option value="">+ modifier</option>${S.catalog.modifiers.filter(m => !(s.modifiers||[]).includes(m.key)).map(m => `<option value="${m.key}" title="${esc(m.description)}">${esc(m.name)}</option>`).join("")}</select>`;
+    const fac = t.factions.find(f => f.name === s.faction);
+    return `<tr>
+      <td style="color:var(--mute)">${shown}</td>
+      <td><input data-s="${i}:character" value="${esc(s.character)}" placeholder="Character name" maxlength="80" style="min-width:140px"></td>
+      <td><div class="rolecell"><button data-pick="${i}" title="Change role">${esc(r ? r.name : s.role_key)} ▾</button>
+        <div>${badge(ab)}${r && r.source==="custom" ? `<span class="tag">custom</span>`:""}</div></div></td>
+      <td><input data-s="${i}:display_name" value="${esc(s.display_name)}" placeholder="${esc(r ? r.name : "")}" maxlength="80" style="min-width:110px"></td>
+      <td style="white-space:nowrap"><span class="facdot" style="background:${esc(fac?.color||"#888")}"></span><select data-s="${i}:faction">${facOpts(s.faction)}</select></td>
+      <td><div class="chips">${mods}${modSel}</div></td>
+      <td><input class="num" type="number" min="0" max="10" data-s="${i}:vote_weight" value="${s.vote_weight ?? ""}" placeholder="auto"></td>
+      <td><input class="num" type="number" min="0" max="100" data-s="${i}:min_players" value="${s.min_players || ""}" placeholder="always" title="Only include this slot when at least this many players sign up"></td>
+      <td style="white-space:nowrap"><button class="ghost" data-up="${i}" title="Move up">↑</button><button class="ghost" data-down="${i}" title="Move down">↓</button><br><button class="ghost" data-dup="${i}" title="Duplicate">⧉</button><button class="ghost" data-del="${i}" title="Remove" style="color:var(--bad)">✕</button></td>
+    </tr>
+    <tr><td></td><td colspan="8" style="border-bottom:1px solid var(--line);padding-top:0">
+      ${pmEditor(s, i, r)}
+    </td></tr>`;
+  };
+  const rows = t.factions.map(f => {
+    const members = t.slots.map((s, i) => [s, i]).filter(([s]) => s.faction === f.name);
+    return `<tr class="fhead"><td colspan="9"><span class="facdot" style="background:${esc(f.color)}"></span><b>${esc(f.name)}</b>
+      <span style="color:var(--mute)">${members.length} character${members.length===1?"":"s"}</span>
+      <button class="ghost" data-addto="${esc(f.name)}" style="margin-left:8px">+ Add role to ${esc(f.name)}</button></td></tr>`
+      + members.map(([s, i]) => rowFor(s, i)).join("");
+  }).join("");
+  return `<div class="card"><h2>Characters & roles <span class="pill">${t.slots.length} slots</span><span class="sp"></span><button id="fillPMs" title="Give every character without a PM a starter draft">Starter PMs for empty slots</button><button class="primary" id="addRole">+ Add roles</button></h2>
+  ${t.slots.length ? `<div style="overflow-x:auto"><table><thead><tr><th>#</th><th>Character</th><th>Role</th><th>Shown as</th><th>Faction</th><th>Modifiers</th><th>Votes</th><th>Only with N+ players</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>`
+    : `<div class="empty">No characters yet. Click <b>+ Add roles</b> to pick from the role list.</div>`}
+  <p style="color:var(--mute);font-size:12px;margin:10px 0 0"><b>Only with N+ players</b>: leave blank for slots that are always in the game. A slot with 9 here only joins when 9 or more people sign up — that's how one theme covers several player counts. <b>Votes</b>: blank uses the role's default (Doublevoter = 2, etc.).</p></div>`;
+}
+
+function confBadge(r) {
+  const c = r && r.confidence;
+  if (c === "standard") return `<span class="tag" title="Well-established meaning across Mafia sites">standard</span>`;
+  if (c === "typical") return `<span class="tag" title="The common version; sites differ">typical</span>`;
+  if (c === "check") return `<span class="tag manual" title="Best reading of the name and tags — confirm the ability before using it">check text</span>`;
+  return "";
+}
+function badge(ab) {
+  if (ab === "none") return `<span class="tag" title="No night action">no action</span>`;
+  if (ab && ab !== "manual") return `<span class="tag auto" title="The bot resolves this role's night action">auto</span>`;
+  return `<span class="tag manual" title="Players send actions; the host rules on them">host rules</span>`;
+}
+
+function factionsHTML() {
+  const t = S.theme;
+  const rows = t.factions.map((f, i) => `<tr>
+    <td><input data-f="${i}:name" value="${esc(f.name)}" maxlength="50"></td>
+    <td><select data-f="${i}:kind">${["town","mafia","third_party"].map(k => `<option value="${k}" ${f.kind===k?"selected":""}>${k.replace("_"," ")}</option>`).join("")}</select></td>
+    <td><input type="color" data-f="${i}:color" value="${esc(f.color)}" style="width:46px;padding:2px"></td>
+    <td><select data-f="${i}:investigates_as"><option ${f.investigates_as==="innocent"?"selected":""}>innocent</option><option ${f.investigates_as==="guilty"?"selected":""}>guilty</option></select></td>
+    <td class="chk"><input type="checkbox" data-f="${i}:chat" ${f.chat?"checked":""}></td>
+    <td><input type="checkbox" data-f="${i}:factional_kill" ${f.factional_kill?"checked":""}></td>
+    <td><button class="ghost" data-delfac="${i}" style="color:var(--bad)">✕</button></td></tr>`).join("");
+  return `<div class="card"><h2>Factions<span class="sp"></span><button id="addFac">+ Add faction</button></h2>
+    <table><thead><tr><th>Name</th><th>Kind</th><th>Color</th><th>Cop result</th><th>Private chat</th><th>Night kill</th><th></th></tr></thead><tbody>${rows}</tbody></table>
+    <p style="color:var(--mute);font-size:12px;margin:10px 0 0">Kind decides win conditions: <b>town</b> wins when no Mafia-kind or killing third parties remain; a <b>mafia</b> faction wins at half the living players with no other killers; <b>third party</b> players win on their own terms (the bot auto-detects a lone killer winning; others the host calls with <span class="mono">/host end</span>).</p></div>`;
+}
+
+function customHTML() {
+  const t = S.theme;
+  const ab = S.catalog.abilities;
+  const rows = t.custom_roles.map((r, i) => `<tr>
+    <td><input data-c="${i}:name" value="${esc(r.name)}" maxlength="60"></td>
+    <td><select data-c="${i}:ability">${Object.entries(ab).map(([k,v]) => `<option value="${k}" ${r.ability===k?"selected":""}>${esc(v)}</option>`).join("")}</select></td>
+    <td style="width:45%"><textarea rows="2" data-c="${i}:description" maxlength="1500" placeholder="Role description / PM text">${esc(r.description)}</textarea></td>
+    <td><button class="ghost" data-delcustom="${i}" style="color:var(--bad)">✕</button></td></tr>`).join("");
+  return `<div class="card"><h2>Custom roles<span class="sp"></span><button id="addCustom">+ New custom role</button></h2>
+    ${t.custom_roles.length ? `<table><thead><tr><th>Name</th><th>What the bot does at night</th><th>Description</th><th></th></tr></thead><tbody>${rows}</tbody></table>` : `<div style="color:var(--mute);font-size:13px">Make a role that isn't on the Mafia Universe list. Pick “Host resolves by hand” for anything the bot can't automate. Custom roles show up at the top of the role picker.</div>`}</div>`;
+}
+
+function settingsHTML() {
+  const s = S.theme.settings;
+  const sel = (k, opts) => `<select data-set="${k}">${opts.map(([v,l]) => `<option value="${v}" ${s[k]===v?"selected":""}>${l}</option>`).join("")}</select>`;
+  const chk = (k, l) => `<label class="chk"><input type="checkbox" data-set="${k}" ${s[k]?"checked":""}> ${l}</label>`;
+  const num = (k, step="1") => `<input type="number" min="0" max="720" step="${step}" data-set="${k}" value="${s[k] ?? ""}">`;
+  return `<div class="card"><h2>Deadlines</h2><div class="settings">
+    <div class="field"><label>Day length (hours) — 0 means the host calls time</label>${num("day_hours")}</div>
+    <div class="field"><label>Night actions due (hours after night starts) — 0 means none</label>${num("night_hours")}</div>
+    <div class="field"><label>Land deadlines on this clock time (optional)</label><input data-set="end_clock" value="${esc(s.end_clock)}" placeholder="e.g. 20:00 or 8pm" maxlength="10"></div>
+    <div class="field"><label>Reminders (hours before a deadline)</label><input data-set="reminder_hours" value="${esc(s.reminder_hours)}" placeholder="24,1" maxlength="40"></div>
+    ${chk("auto_night","Start the night as soon as the day ends")}
+  </div>
+  <p style="color:var(--mute);font-size:12px;margin:12px 0 0">These are defaults. The host can set an exact end for any phase with <span class="mono">/host deadline Nov 24 8pm</span>, push it back with <span class="mono">/host extend 2h</span>, or clear it. When a day's deadline passes, the most-voted player is lynched (ties follow the rule below) and the channel locks. When night actions are due, <span class="mono">/action</span> closes and the host gets the preview; results go out whenever the host applies them. The clock time uses the server's timezone (<span class="mono">/mafia config timezone:</span>).</p></div>
+  <div class="card"><h2>Rules</h2><div class="settings">
+    <div class="field"><label>When someone dies, reveal</label>${sel("reveal_on_death",[["role","Character, role & faction"],["alignment","Character & faction"],["none","Character only"]])}</div>
+    <div class="field"><label>Game starts at</label>${sel("start_phase",[["day","Day 1"],["night","Night 0"]])}</div>
+    <div class="field"><label>Tied vote when the host ends the day</label>${sel("tie_rule",[["no_lynch","No lynch"],["random","Random among tied"]])}</div>
+    <div></div>
+    ${chk("public_roster","Open setup (players see the roster)")}
+    ${chk("allow_no_lynch","Allow voting No Lynch")}
+    ${chk("text_votes","Count “VOTE: name” messages")}
+    ${chk("auto_end","End the game automatically on a win")}
+    ${chk("notify_blocked","Tell roleblocked players they were blocked")}
+  </div></div>`;
+}
+
+function barHTML() {
+  const t = S.theme, p = S.preview;
+  const counts = t.factions.map(f => [f, t.slots.filter(s => s.faction === f.name).length]).filter(x => x[1]);
+  const facs = counts.map(([f,n]) => `<span class="pill"><span class="facdot" style="background:${esc(f.color)}"></span>${esc(f.name)} ${n}</span>`).join(" ");
+  let status = "";
+  if (p && !p.ok) status = `<span class="pill bad">${esc(p.error)}</span>`;
+  else if (p && p.supported_counts.length) status = `<span class="pill ok">Plays ${rangeText(p.supported_counts)} players</span>`;
+  else if (p) status = `<span class="pill bad">No player count fits yet</span>`;
+  return `<div class="bar">${facs}${status}<span class="sp"></span>${dirty() ? `<span style="color:var(--warn);font-size:12px">Unsaved changes</span>` : `<span style="color:var(--mute);font-size:12px">Saved</span>`}
+    <button class="primary" id="save" ${dirty()?"":"disabled"}>Save theme</button></div>`;
+}
+function rangeText(a) {
+  const out = []; let s = a[0], prev = a[0];
+  for (const n of a.slice(1).concat([null])) { if (n === prev + 1) { prev = n; continue; } out.push(s === prev ? `${s}` : `${s}–${prev}`); s = prev = n; }
+  return out.join(", ");
+}
+
+function gamesHTML() {
+  if (!S.games.length) return `<div class="card"><h2>Recent games</h2><div class="empty">No games yet. Start one in Discord with <span class="mono">/game new</span>.</div></div>`;
+  return `<div class="card"><h2>Recent games</h2><table><thead><tr><th>Theme</th><th>Phase</th><th>Players</th><th>Alive</th><th>Winners</th><th>Started</th></tr></thead><tbody>
+  ${S.games.map(g => `<tr><td>${esc(g.theme)}</td><td>${esc(g.phase === "ended" ? "Over" : g.phase === "signups" ? "Signups" : (g.phase === "night" ? "Night " : "Day ") + g.day)}</td><td>${g.players}</td><td>${g.phase==="signups"?"—":g.alive}</td><td>${esc((g.winners||[]).join(", "))}</td><td>${new Date(g.created*1000).toLocaleString()}</td></tr>`).join("")}
+  </tbody></table></div>`;
+}
+
+// ---------------------------------------------------------------- picker
+function openPicker(mode, slotIndex=null, faction=null) {
+  S.picker = {mode, slotIndex, faction, q:"", tag:"", autoOnly:false, added:{}};
+  renderPicker(); setTimeout(() => $("#pq")?.focus(), 0);
+}
+function pickerRoles() {
+  const P = S.picker, q = P.q.trim().toLowerCase();
+  let pool = S.theme.custom_roles.map(r => ({...r, tags:["Custom"], source:"custom"})).concat(S.catalog.roles);
+  if (P.tag) pool = pool.filter(r => (r.tags||[]).includes(P.tag));
+  if (P.autoOnly) pool = pool.filter(r => r.ability && !["manual","none"].includes(r.ability));
+  if (q) {
+    const starts = pool.filter(r => r.name.toLowerCase().startsWith(q));
+    const rest = pool.filter(r => !starts.includes(r) && (r.name.toLowerCase().includes(q) || (r.description||"").toLowerCase().includes(q)));
+    pool = starts.concat(rest);
+  }
+  return pool;
+}
+function renderPicker() {
+  const P = S.picker;
+  if (!P) { $("#modal").innerHTML = ""; return; }
+  const tags = [...new Set(S.catalog.roles.flatMap(r => r.tags))].sort();
+  const list = pickerRoles();
+  const items = list.slice(0, 300).map(r => `<div class="ritem"><div><b>${esc(r.name)}</b>
+      ${badge(r.ability)}${confBadge(r)}${(r.tags||[]).map(t => `<span class="tag">${esc(t)}</span>`).join("")}
+      ${P.added[r.key] ? `<span class="added">✓ added ×${P.added[r.key]}</span>` : ""}
+      <p class="${r.description ? "" : "none"}">${esc(r.description || "No description yet — you'll write the PM text.")}</p></div>
+      <div><button class="primary" data-use="${esc(r.key)}">${P.mode === "change" ? "Use" : "Add"}</button></div></div>`).join("");
+  $("#modal").innerHTML = `<div class="modal" id="mbg"><div class="box">
+    <div class="head"><input type="search" id="pq" placeholder="Search ${S.catalog.roles.length} roles… (e.g. cop, doctor, jester)" value="${esc(P.q)}">
+      <select id="ptag"><option value="">All types</option>${tags.map(t => `<option ${P.tag===t?"selected":""}>${esc(t)}</option>`).join("")}</select>
+      <label class="chk"><input type="checkbox" id="pauto" ${P.autoOnly?"checked":""}> Bot-resolved actions only</label>
+      <button id="pclose">Done</button>
+      ${P.mode === "add" ? `<div style="width:100%;color:var(--mute);font-size:12px">Adding to <b>${esc(P.faction || "the faction each role usually belongs to")}</b>. Name the characters in the table after.</div>` : ""}</div>
+    <div class="list">${items || `<div class="empty">No roles match.</div>`}${list.length > 300 ? `<div class="empty">${list.length - 300} more — keep typing to narrow it down.</div>` : ""}</div>
+  </div></div>`;
+}
+function defaultFaction(r) {
+  const f = S.theme.factions;
+  const pick = kind => (f.find(x => x.kind === kind) || f[0]).name;
+  if (r.alignment_hint === "mafia") return pick("mafia");
+  if (r.alignment_hint === "third_party") return pick("third_party");
+  return pick("town");
+}
+function useRole(key) {
+  const r = role(key), P = S.picker;
+  if (P.mode === "change") { S.theme.slots[P.slotIndex].role_key = key; S.picker = null; renderPicker(); changed(true); return; }
+  S.theme.slots.push({character:"", role_key:key, display_name:"", faction:P.faction || defaultFaction(r), modifiers:[], pm_text:"", vote_weight:null, min_players:0});
+  P.added[key] = (P.added[key]||0) + 1;
+  renderPicker(); changed(true);
+}
+
+// ---------------------------------------------------------------- editing
+let previewTimer = null;
+function changed(full=false) {
+  if (full) render(); else { const b = $(".bar"); if (b) b.outerHTML = barHTML(); }
+  clearTimeout(previewTimer);
+  previewTimer = setTimeout(async () => {
+    try { S.preview = await api("/api/preview", {method:"POST", body: JSON.stringify(S.theme)}); } catch (e) { S.preview = {ok:false, error:e.message, supported_counts:[]}; }
+    const b = $(".bar"); if (b) b.outerHTML = barHTML();
+  }, 350);
+}
+function coerce(el) {
+  if (el.type === "checkbox") return el.checked;
+  if (el.type === "number") return el.value === "" ? null : parseInt(el.value, 10);
+  return el.value;
+}
+
+document.addEventListener("input", e => {
+  const el = e.target, t = S.theme;
+  if (el.id === "pq") { S.picker.q = el.value; const pos = el.selectionStart; renderPicker(); const n = $("#pq"); n.focus(); n.setSelectionRange(pos,pos); return; }
+  if (!t) return;
+  if (el.dataset.k) { t[el.dataset.k] = el.value; changed(); }
+  else if (el.dataset.s) { const [i,k] = el.dataset.s.split(":"); let v = coerce(el); if (k==="min_players") v = v || 0; t.slots[+i][k] = v; changed();
+    if (k === "pm_text" || k === "character") { const row = el.closest("tr"); const pmRow = k === "pm_text" ? row : row.nextElementSibling;
+      const cell = pmRow && pmRow.querySelector(".pmedit, .pmrow")?.closest("td"); if (cell) { const ta = cell.querySelector("textarea"); const pos = ta ? ta.selectionStart : 0;
+        cell.innerHTML = pmEditor(t.slots[+i], +i, role(t.slots[+i].role_key)); const nta = cell.querySelector("textarea"); if (nta && k === "pm_text") { nta.focus(); nta.setSelectionRange(pos, pos); } } } }
+  else if (el.dataset.f && el.type !== "checkbox" && el.tagName !== "SELECT") {
+    const [i,k] = el.dataset.f.split(":"); const old = t.factions[+i].name; t.factions[+i][k] = el.value;
+    if (k === "name") t.slots.forEach(s => { if (s.faction === old) s.faction = el.value; });
+    changed();
+  }
+  else if (el.dataset.c && el.tagName !== "SELECT") { const [i,k] = el.dataset.c.split(":"); t.custom_roles[+i][k] = el.value; changed(); }
+  else if (el.dataset.set && el.tagName === "INPUT" && el.type !== "checkbox") { t.settings[el.dataset.set] = el.type === "number" ? (el.value === "" ? 0 : parseFloat(el.value)) : el.value; changed(); }
+});
+
+document.addEventListener("change", async e => {
+  const el = e.target, t = S.theme;
+  if (el.id === "guild") { if (dirty() && !confirm("Discard unsaved changes?")) { el.value = S.gid; return; }
+    S.gid = el.value; localStorage.setItem("gid", S.gid); S.theme = null; S.view = "themes"; await loadThemes(); render(); return; }
+  if (el.id === "ptag") { S.picker.tag = el.value; renderPicker(); return; }
+  if (el.id === "pauto") { S.picker.autoOnly = el.checked; renderPicker(); return; }
+  if (!t) return;
+  if (el.dataset.addmod && el.value) { const i = +el.dataset.addmod; t.slots[i].modifiers = [...(t.slots[i].modifiers||[]), el.value]; changed(true); }
+  else if (el.dataset.s && el.tagName === "SELECT") { const [i,k] = el.dataset.s.split(":"); t.slots[+i][k] = el.value; changed(true); }
+  else if (el.dataset.f && (el.type === "checkbox" || el.tagName === "SELECT")) { const [i,k] = el.dataset.f.split(":"); t.factions[+i][k] = coerce(el); changed(true); }
+  else if (el.dataset.f && el.type === "color") { changed(true); }
+  else if (el.dataset.c && el.tagName === "SELECT") { const [i,k] = el.dataset.c.split(":"); t.custom_roles[+i][k] = el.value; changed(true); }
+  else if (el.dataset.set && (el.type === "checkbox" || el.tagName === "SELECT")) { t.settings[el.dataset.set] = coerce(el); changed(); }
+});
+
+document.addEventListener("click", async e => {
+  const b = e.target.closest("button, #mbg"); if (!b) return;
+  const t = S.theme, d = b.dataset;
+  if (b.id === "mbg" && e.target.id === "mbg") { S.picker = null; renderPicker(); return; }
+  if (b.id === "pclose") { S.picker = null; renderPicker(); return; }
+  if (d.use) { useRole(d.use); return; }
+  if (b.id === "newTheme") { if (dirty() && !confirm("Discard unsaved changes?")) return;
+    S.theme = JSON.parse(JSON.stringify(S.catalog.defaults)); S.theme.id = null; S.saved = "{}"; S.view = "themes"; S.msg = null; render(); changed(); return; }
+  if (d.open) { if (dirty() && !confirm("Discard unsaved changes?")) return;
+    S.theme = await api(`/api/guilds/${S.gid}/themes/${d.open}`); S.saved = JSON.stringify(S.theme); S.view = "themes"; S.msg = null; render(); changed(); return; }
+  if (b.id === "showGames") { if (dirty() && !confirm("Discard unsaved changes?")) return; S.theme = null; S.view = "games"; await loadGames(); render(); return; }
+  if (b.id === "save") { await save(); return; }
+  if (!t) return;
+  if (b.id === "addRole") { openPicker("add"); return; }
+  if (d.pmtoggle) { S.openPM = S.openPM || new Set(); const i = +d.pmtoggle; S.openPM.has(i) ? S.openPM.delete(i) : S.openPM.add(i); render(); return; }
+  if (d.starter || b.id === "fillPMs") {
+    const only = d.starter ? [+d.starter] : t.slots.map((s, k) => k).filter(k => !t.slots[k].pm_text);
+    if (!only.length) { S.msg = {kind:"ok", text:"Every character already has a PM."}; render(); return; }
+    if (d.starter && t.slots[+d.starter].pm_text && !confirm("Replace this PM with a fresh starter draft?")) return;
+    const missingNames = only.filter(k => !t.slots[k].character.trim());
+    try {
+      const draft = JSON.parse(JSON.stringify(t));
+      missingNames.forEach(k => draft.slots[k].character = `Character ${k+1}`);
+      const out = await api("/api/starter-pms", {method:"POST", body: JSON.stringify({...draft, only})});
+      S.openPM = S.openPM || new Set();
+      for (const [k, text] of Object.entries(out)) { t.slots[+k].pm_text = text; S.openPM.add(+k); }
+      S.msg = {kind:"ok", text:`Added ${only.length} starter PM${only.length>1?"s":""}. Edit the [GM: …] lines — they're never sent to players.`};
+    } catch (err) { S.msg = {kind:"bad", text: "Fix this first: " + err.message}; }
+    changed(true); return;
+  }
+  if (d.pick) { openPicker("change", +d.pick); return; }
+  if (d.addto) { openPicker("add", null, d.addto); return; }
+  if (d.del) { t.slots.splice(+d.del, 1); changed(true); return; }
+  if (d.dup) { const s = JSON.parse(JSON.stringify(t.slots[+d.dup])); s.character = ""; t.slots.splice(+d.dup + 1, 0, s); changed(true); return; }
+  if (d.up || d.down) {
+    const i = +(d.up ?? d.down), f = t.slots[i].faction;
+    const same = t.slots.map((s, k) => k).filter(k => t.slots[k].faction === f);
+    const pos = same.indexOf(i), j = same[d.up !== undefined ? pos - 1 : pos + 1];
+    if (j !== undefined) { [t.slots[i], t.slots[j]] = [t.slots[j], t.slots[i]]; changed(true); }
+    return;
+  }
+  if (d.delmod) { const [i,k] = d.delmod.split(":"); t.slots[+i].modifiers = t.slots[+i].modifiers.filter(m => m !== k); changed(true); return; }
+  if (b.id === "addFac") { t.factions.push({name:`Faction ${t.factions.length+1}`, kind:"third_party", color:"#5b8def", chat:false, factional_kill:false, investigates_as:"guilty"}); changed(true); return; }
+  if (d.delfac) { const f = t.factions[+d.delfac]; if (t.slots.some(s => s.faction === f.name)) { alert(`Move the characters out of ${f.name} first.`); return; } t.factions.splice(+d.delfac, 1); changed(true); return; }
+  if (b.id === "addCustom") { t.custom_roles.push({key:"custom_" + Math.random().toString(36).slice(2,10), name:`Custom role ${t.custom_roles.length+1}`, ability:"manual", description:"", traits:[]}); changed(true); return; }
+  if (d.delcustom) { const r = t.custom_roles[+d.delcustom]; if (r.key && t.slots.some(s => s.role_key === r.key)) { alert("A character still uses this role."); return; } t.custom_roles.splice(+d.delcustom, 1); changed(true); return; }
+  if (b.id === "delTheme") { if (!t.id) { S.theme = null; render(); return; } if (!confirm(`Delete “${t.name}”? This can't be undone.`)) return;
+    await api(`/api/guilds/${S.gid}/themes/${t.id}`, {method:"DELETE", body:"{}"}); S.theme = null; S.saved = null; await loadThemes(); S.msg = {kind:"ok", text:"Theme deleted."}; render(); }
+});
+
+async function save() {
+  const t = S.theme;
+  // custom roles need keys before slots can reference them; server assigns stable keys
+  try {
+    const saved = t.id ? await api(`/api/guilds/${S.gid}/themes/${t.id}`, {method:"PUT", body: JSON.stringify(t)})
+                       : await api(`/api/guilds/${S.gid}/themes`, {method:"POST", body: JSON.stringify(t)});
+    S.theme = saved; S.saved = JSON.stringify(saved); await loadThemes();
+    S.msg = {kind:"ok", text:`Saved “${saved.name}”. Start it in Discord with /game new.`};
+  } catch (err) { S.msg = {kind:"bad", text: err.message}; }
+  render(); changed();
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+boot().catch(e => { $("#app").innerHTML = `<div class="center"><div class="msg bad">${esc(e.message)}</div></div>`; });
+</script>
+</body>
+</html>

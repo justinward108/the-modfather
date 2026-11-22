@@ -1,0 +1,6640 @@
+{
+ "source": "Mafia Universe role database (names and type tags)",
+ "source_url": "https://www.mafiauniverse.com/forums/database/mafia-roles/",
+ "roles": [
+  {
+   "key": "ability_thief",
+   "name": "Ability Thief",
+   "tags": [
+    "Power-gaining",
+    "Informative"
+   ],
+   "description": "Each night, target a player. If they have an active ability, you learn it and may use it yourself on a later night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "absentee_voter",
+   "name": "Absentee Voter",
+   "tags": [
+    "Protective"
+   ],
+   "description": "You may submit your vote privately to the host instead of in the thread; it still counts toward the lynch.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "absorber",
+   "name": "Absorber",
+   "tags": [
+    "Passive",
+    "Power-gaining"
+   ],
+   "description": "When a player with an ability dies, you may absorb it and use it from then on.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "actor",
+   "name": "Actor",
+   "tags": [
+    "Voting"
+   ],
+   "description": "Each day, you may cast your vote as if you were another player of your choice. Ask the host for exact rules.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "actress",
+   "name": "Actress",
+   "tags": [
+    "Misleading",
+    "Informative",
+    "Role Reveal"
+   ],
+   "description": "Each night, choose a player. You learn their role, and if you die you will appear to be that role.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "addictive_cop",
+   "name": "Addictive Cop",
+   "tags": [
+    "Informative",
+    "Misleading"
+   ],
+   "description": "Each night, investigate a player and learn their alignment. You must investigate every night, or lose your power.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "adrenalin_junkie",
+   "name": "Adrenalin Junkie",
+   "tags": [
+    "Protective",
+    "Passive"
+   ],
+   "description": "If you are attacked at night, you survive until the end of the following day, then die.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "alarmist",
+   "name": "Alarmist",
+   "tags": [
+    "Support"
+   ],
+   "description": "Once per game, during the night, you may raise an alarm that forces the next day to start with an announcement chosen by the host.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "alert_townie",
+   "name": "Alert Townie",
+   "tags": [
+    "Informative",
+    "Passive"
+   ],
+   "description": "You are told whenever someone targets you at night, but not who it was.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "alien",
+   "name": "Alien",
+   "tags": [
+    "Protective",
+    "Manipulative"
+   ],
+   "description": "Each night, abduct a player. They cannot act and cannot be targeted that night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "alignment_cop",
+   "name": "Alignment Cop",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, investigate one player and learn their alignment.",
+   "confidence": "standard",
+   "ability": "investigate",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "ambulance_driver",
+   "name": "Ambulance Driver",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, choose a player. If they die that night, you learn who visited them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "amnesiac",
+   "name": "Amnesiac",
+   "tags": [
+    "Third Party",
+    "Role-changing"
+   ],
+   "description": "You have no role of your own. Once during the game, choose a dead player and take their role (and alignment, unless the host says otherwise).",
+   "confidence": "standard",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "amnesiac_cop",
+   "name": "Amnesiac Cop",
+   "tags": [
+    "Informative",
+    "Linked"
+   ],
+   "description": "You investigate a player each night, but you only learn the results once a linked event happens (the host will tell you when).",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "amplifier",
+   "name": "Amplifier",
+   "tags": [
+    "Support"
+   ],
+   "description": "Each night, amplify a player's ability: their action that night is stronger or has an extra effect, as the host describes.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "anarchist",
+   "name": "Anarchist",
+   "tags": [
+    "Killing",
+    "Third Party"
+   ],
+   "description": "You are a third-party killer who wins by causing chaos. Each night you may kill a player.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "ancient",
+   "name": "Ancient",
+   "tags": [
+    "Passive"
+   ],
+   "description": "You are hard to kill: the first time you would die at night, you survive.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "anti_doctor",
+   "name": "Anti-Doctor",
+   "tags": [
+    "Killing"
+   ],
+   "description": "Each night, choose a player. If a Doctor protects them, the protection fails and they die from your attack.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "apportioner",
+   "name": "Apportioner",
+   "tags": [
+    "Protective"
+   ],
+   "description": "Each night, choose two players. Protection given to one is shared with the other.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "architect",
+   "name": "Architect",
+   "tags": [
+    "Communicative",
+    "Multi-targeting"
+   ],
+   "description": "Each night, choose two players. They share a private chat the next night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "armorsmith",
+   "name": "Armorsmith",
+   "tags": [
+    "Protective",
+    "Support"
+   ],
+   "description": "Each night, give a player a vest that protects them from one kill.",
+   "confidence": "standard",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "arms_dealer",
+   "name": "Arms Dealer",
+   "tags": [
+    "Manipulative",
+    "Killing"
+   ],
+   "description": "Each night, give a player a gun. Guns may be used once to shoot someone during the day or night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "arsonist",
+   "name": "Arsonist",
+   "tags": [
+    "Killing",
+    "Third Party"
+   ],
+   "description": "Each night, either douse a player in gasoline or ignite: igniting kills everyone you have doused. You win when you are the last one standing.",
+   "confidence": "standard",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "ascetic",
+   "name": "Ascetic",
+   "tags": [
+    "Passive",
+    "Protective"
+   ],
+   "description": "Non-killing actions targeting you have no effect on you.",
+   "confidence": "standard",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "asceticiser",
+   "name": "Asceticiser",
+   "tags": [
+    "Support",
+    "Protective"
+   ],
+   "description": "Each night, make a player ascetic: non-killing actions on them fail that night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "asshole",
+   "name": "Asshole",
+   "tags": [
+    "Protective"
+   ],
+   "description": "No one can protect you, and you cannot be targeted by friendly actions.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "associate",
+   "name": "Associate",
+   "tags": [
+    "Misleading"
+   ],
+   "description": "You appear as a different alignment or role to investigations, as the host describes.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "mafia",
+   "source": "mu"
+  },
+  {
+   "key": "astronomer",
+   "name": "Astronomer",
+   "tags": [
+    "Manipulative"
+   ],
+   "description": "Once per game, cause an extra night phase to happen immediately after the day.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "asylum_doctor",
+   "name": "Asylum Doctor",
+   "tags": [
+    "Protective",
+    "Manipulative"
+   ],
+   "description": "Each night, choose a player. They are protected from kills but also blocked from acting.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "atheist",
+   "name": "Atheist",
+   "tags": [
+    "Third Party"
+   ],
+   "description": "Third party. You win if no religious role (Priest, Cult, etc.) wins, as the host describes.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "attention_seeker",
+   "name": "Attention Seeker",
+   "tags": [
+    "Manipulative",
+    "Redirection"
+   ],
+   "description": "Each night, choose a player. All actions aimed at them are redirected to you.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "avenger",
+   "name": "Avenger",
+   "tags": [
+    "Killing"
+   ],
+   "description": "If a chosen player dies, you may kill a player in revenge.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "avoider",
+   "name": "Avoider",
+   "tags": [
+    "Manipulative"
+   ],
+   "description": "Each night, choose a player. If they target you, their action fails.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "babysitter",
+   "name": "Babysitter",
+   "tags": [
+    "Protective"
+   ],
+   "description": "Each night, protect a player. If you die, the player you are watching dies too.",
+   "confidence": "standard",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "backup",
+   "name": "Backup",
+   "tags": [
+    "Passive",
+    "Support",
+    "Linked"
+   ],
+   "description": "You are the backup for a specific role. If that role dies, you inherit it.",
+   "confidence": "standard",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "baker",
+   "name": "Baker",
+   "tags": [
+    "Support"
+   ],
+   "description": "Each night, give a player bread. Bread lets them use their ability an extra time.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "bartender",
+   "name": "Bartender",
+   "tags": [
+    "Manipulative"
+   ],
+   "description": "Each night, serve a player a drink: they are roleblocked or confused (their action may fail or have a random target).",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "beguiler",
+   "name": "Beguiler",
+   "tags": [
+    "Redirection",
+    "Protective"
+   ],
+   "description": "Each night, choose a player. Anyone who targets you is redirected to them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "berserker",
+   "name": "Berserker",
+   "tags": [
+    "Killing"
+   ],
+   "description": "Each night, choose a player. You kill them and anyone who visits them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "bff",
+   "name": "BFF",
+   "tags": [
+    "Linked"
+   ],
+   "description": "You are linked to another player. You know each other's roles and, if one of you dies, the other loses their power.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "big_brother",
+   "name": "Big Brother",
+   "tags": [
+    "Informative",
+    "Mass Effect"
+   ],
+   "description": "Each night, you learn every action that was performed, but not who did them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "black_goo",
+   "name": "Black Goo",
+   "tags": [
+    "Passive",
+    "Role-changing",
+    "Third Party"
+   ],
+   "description": "When a player targets you, they become a Goo and join your side.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "black_hat",
+   "name": "Black Hat",
+   "tags": [
+    "Manipulative",
+    "Mass Effect",
+    "Role Reveal"
+   ],
+   "description": "Once per game, reveal the roles of everyone who targeted a chosen player that night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "blackjack",
+   "name": "Blackjack",
+   "tags": [
+    "Mass Effect",
+    "Role-changing"
+   ],
+   "description": "Each night, choose a player. They lose their role and become a vanilla version of their alignment.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "blob",
+   "name": "Blob",
+   "tags": [
+    "Third Party",
+    "Mission",
+    "Passive"
+   ],
+   "description": "Third party. Each night, absorb a player into the Blob. You win when everyone left alive is part of the Blob.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "bodyguard",
+   "name": "Bodyguard",
+   "tags": [
+    "Protective"
+   ],
+   "description": "Each night, guard one player. If they are attacked, you die in their place.",
+   "confidence": "standard",
+   "ability": "guard",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "bodyguard_boss",
+   "name": "Bodyguard Boss",
+   "tags": [
+    "Protective",
+    "Manipulative",
+    "Multi-targeting"
+   ],
+   "description": "Each night, assign members of your team to guard players; they die in place of whoever they guard.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "bodyguard_jailkeeper",
+   "name": "Bodyguard Jailkeeper",
+   "tags": [
+    "Protective",
+    "Manipulative"
+   ],
+   "description": "Each night, jail a player: they are protected and cannot act. If they are attacked, you die in their place.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "bomb",
+   "name": "Bomb",
+   "tags": [
+    "Killing",
+    "Passive"
+   ],
+   "description": "If you are killed at night, your killer dies too.",
+   "confidence": "standard",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "bomb_defuser",
+   "name": "Bomb Defuser",
+   "tags": [
+    "Protective"
+   ],
+   "description": "Each night, choose a player. If they are a Bomb or carry a bomb, it is defused.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "boogeyman",
+   "name": "Boogeyman",
+   "tags": [
+    "Killing",
+    "Third Party",
+    "Mission"
+   ],
+   "description": "Third party. Each night, scare a player: they cannot act. Kill your targets to complete your mission.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "bounty_hunter",
+   "name": "Bounty Hunter",
+   "tags": [
+    "Third Party",
+    "Mission",
+    "Killing"
+   ],
+   "description": "Third party. You are told a target. You win if they are dead by the end of the game; you may kill at night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "brainshocker",
+   "name": "Brainshocker",
+   "tags": [
+    "Redirection"
+   ],
+   "description": "Each night, choose a player. Their action is redirected to a random target.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "bulletproof",
+   "name": "Bulletproof",
+   "tags": [
+    "Protective",
+    "Passive"
+   ],
+   "description": "You survive night kills.",
+   "confidence": "standard",
+   "ability": "none",
+   "traits": [
+    "bulletproof"
+   ],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "bulletproof_avoider",
+   "name": "Bulletproof Avoider",
+   "tags": [
+    "Protective"
+   ],
+   "description": "You are bulletproof against one kind of attacker, as the host describes.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "bumbling_cop",
+   "name": "Bumbling Cop",
+   "tags": [
+    "Killing",
+    "Misleading"
+   ],
+   "description": "You investigate a player each night, but sometimes your investigation kills them by mistake.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "burglar",
+   "name": "Burglar",
+   "tags": [
+    "Manipulative",
+    "Role-changing"
+   ],
+   "description": "Each night, steal an item or ability from a player.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "bus_driver",
+   "name": "Bus Driver",
+   "tags": [
+    "Redirection",
+    "Multi-targeting"
+   ],
+   "description": "Each night, pick two players. Every action aimed at one hits the other instead.",
+   "confidence": "standard",
+   "ability": "bus",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "businessman",
+   "name": "Businessman",
+   "tags": [
+    "Support"
+   ],
+   "description": "Each night, give a player a business deal: they gain an extra use of their ability.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "bystander",
+   "name": "Bystander",
+   "tags": [
+    "Passive",
+    "Misleading"
+   ],
+   "description": "You have no ability. You appear as a power role to investigations.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "cannibal",
+   "name": "Cannibal",
+   "tags": [
+    "Killing",
+    "Third Party"
+   ],
+   "description": "Third party. Each night, eat a player: they die and you gain their ability.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "cannibal_baker",
+   "name": "Cannibal Baker",
+   "tags": [
+    "Support",
+    "Killing"
+   ],
+   "description": "Each night, give a player bread. Bread from you may kill them instead of helping.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "cannoneer",
+   "name": "Cannoneer",
+   "tags": [
+    "Support",
+    "Passive",
+    "Mass Effect"
+   ],
+   "description": "When you die, a cannon fires: a random player dies too.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "captain",
+   "name": "Captain",
+   "tags": [
+    "Manipulative"
+   ],
+   "description": "Each night, give a player orders: they must target a player you choose.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "caroler",
+   "name": "Caroler",
+   "tags": [
+    "Informative",
+    "Support"
+   ],
+   "description": "Each night, sing to a player: they learn some information you choose (true or false).",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "chief_of_police",
+   "name": "Chief of Police",
+   "tags": [
+    "Informative"
+   ],
+   "description": "You know who the Cops are, and you receive copies of their results.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "child_murderer",
+   "name": "Child Murderer",
+   "tags": [
+    "Killing",
+    "Passive"
+   ],
+   "description": "You may kill a player at night. If you are lynched, the town loses its next day's vote.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "claim_vigilante",
+   "name": "Claim Vigilante",
+   "tags": [
+    "Killing"
+   ],
+   "description": "Each day, name a player and a role. If they are that role, they die.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "clairvoyant",
+   "name": "Clairvoyant",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, investigate a player and learn one piece of information about their role.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "clockmaker",
+   "name": "Clockmaker",
+   "tags": [
+    "Mission",
+    "Killing",
+    "Third Party"
+   ],
+   "description": "Third party. Set a clock on a player; when it runs out, they die.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "colorblind_cop",
+   "name": "Colorblind Cop",
+   "tags": [
+    "Informative"
+   ],
+   "description": "You investigate alignment, but can't tell some alignments apart (e.g. Mafia from third parties).",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "command_based_robot",
+   "name": "Command Based Robot",
+   "tags": [
+    "Multi-power"
+   ],
+   "description": "You follow commands from the host or another player, gaining abilities as instructed.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "communication_cop",
+   "name": "Communication Cop",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, investigate a player and learn whether they are in a private chat (Mafia, Masons, Lovers...).",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "communist",
+   "name": "Communist",
+   "tags": [
+    "Mission",
+    "Third Party"
+   ],
+   "description": "Third party. You win when every living player has the same role (everyone is equal).",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "commuter",
+   "name": "Commuter",
+   "tags": [
+    "Protective"
+   ],
+   "description": "Each night you may leave town; all actions targeting you fail.",
+   "confidence": "standard",
+   "ability": "commute",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "companion",
+   "name": "Companion",
+   "tags": [
+    "Protective",
+    "Redirection"
+   ],
+   "description": "Each night, choose a player. You visit them and protect them; actions aimed at you go to them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "confidant",
+   "name": "Confidant",
+   "tags": [
+    "Informative"
+   ],
+   "description": "You may share a private message with one player each night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "confirmation_cop",
+   "name": "Confirmation Cop",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, name a player and a role. You learn whether that player is that role.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "consigliere",
+   "name": "Consigliere",
+   "tags": [
+    "Misleading"
+   ],
+   "description": "Each night, investigate a player and learn their role. You work with the Mafia.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "mafia",
+   "source": "mu"
+  },
+  {
+   "key": "conspiracy_theorist",
+   "name": "Conspiracy Theorist",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, investigate a group of players and learn whether any of them are scum.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "converter",
+   "name": "Converter",
+   "tags": [
+    "Role-changing"
+   ],
+   "description": "Each night, convert a player to your alignment.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "cop",
+   "name": "Cop",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, investigate one player and learn their alignment.",
+   "confidence": "standard",
+   "ability": "investigate",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "cop_invalidator",
+   "name": "Cop Invalidator",
+   "tags": [
+    "Manipulative"
+   ],
+   "description": "Each night, choose a player. Investigations on them fail that night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "copycat",
+   "name": "Copycat",
+   "tags": [
+    "Multi-power",
+    "Multi-targeting"
+   ],
+   "description": "Each night, choose a player and copy their action onto a target of your choice.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "coroner",
+   "name": "Coroner",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, examine a dead player and learn details about their death.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "cpr_doctor",
+   "name": "CPR Doctor",
+   "tags": [
+    "Protective",
+    "Killing"
+   ],
+   "description": "Each night, protect a player. If no one attacks them, your treatment kills them instead.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "crazy_old_man",
+   "name": "Crazy Old Man",
+   "tags": [
+    "Misleading"
+   ],
+   "description": "You have no ability and believe you have one; your results are made up.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "creepy_girl",
+   "name": "Creepy Girl",
+   "tags": [
+    "Mission",
+    "Third Party"
+   ],
+   "description": "Third party. You hold a doll; give it to a player. You win if the doll's holder dies or is alive at the end, as the host describes.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "crippler",
+   "name": "Crippler",
+   "tags": [
+    "Killing"
+   ],
+   "description": "Each night, cripple a player: they permanently lose their ability.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "cult_leader",
+   "name": "Cult Leader",
+   "tags": [
+    "Manipulative",
+    "Mission",
+    "Role-changing",
+    "Third Party"
+   ],
+   "description": "Third party. Each night, try to recruit a player into your Cult.",
+   "confidence": "standard",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "cultist",
+   "name": "Cultist",
+   "tags": [
+    "Third Party"
+   ],
+   "description": "Member of the Cult. You win with your Cult.",
+   "confidence": "standard",
+   "ability": "none",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "cupid",
+   "name": "Cupid",
+   "tags": [
+    "Role-changing",
+    "Communicative"
+   ],
+   "description": "On the first night, choose two players to become Lovers. If one dies, the other dies too.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "cycle_doctor",
+   "name": "Cycle Doctor",
+   "tags": [
+    "Protective"
+   ],
+   "description": "You protect players in a set order each night, as the host describes.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "dealmaker",
+   "name": "Dealmaker",
+   "tags": [
+    "Misleading",
+    "Support"
+   ],
+   "description": "Each night, offer a player a deal: you swap a piece of information or an effect, as the host describes.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "death_miller",
+   "name": "Death Miller",
+   "tags": [
+    "Passive",
+    "Role Reveal"
+   ],
+   "description": "You are Town, but when you die you are revealed as Mafia.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "death_tailor",
+   "name": "Death Tailor",
+   "tags": [
+    "Misleading",
+    "Role Reveal"
+   ],
+   "description": "Each night, choose a player and a role. If they die, they are revealed as that role.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "deathproof",
+   "name": "Deathproof",
+   "tags": [
+    "Protective",
+    "Passive"
+   ],
+   "description": "You cannot die at night by any means.",
+   "confidence": "standard",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "deceiver",
+   "name": "Deceiver",
+   "tags": [
+    "Misleading",
+    "Role Reveal"
+   ],
+   "description": "When you die, you are revealed as a role of your choosing.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "decoy",
+   "name": "Decoy",
+   "tags": [
+    "Misleading"
+   ],
+   "description": "Each night, choose a player. Anyone who targets them is told they targeted you instead, or vice versa, as the host describes.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "deflector",
+   "name": "Deflector",
+   "tags": [
+    "Redirection",
+    "Multi-targeting"
+   ],
+   "description": "Each night, choose two players. Kills aimed at the first are moved to the second.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "delayed_vigilante",
+   "name": "Delayed Vigilante",
+   "tags": [
+    "Killing"
+   ],
+   "description": "Each night, shoot a player. They die at the end of the following night, not immediately.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "deprogrammer",
+   "name": "Deprogrammer",
+   "tags": [
+    "Role-changing",
+    "Support"
+   ],
+   "description": "Each night, choose a player. If they were converted or recruited, they return to their original side.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "deputy",
+   "name": "Deputy",
+   "tags": [
+    "Informative"
+   ],
+   "description": "You assist the Sheriff or Cop: if they die, you take over their investigations.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "desperado",
+   "name": "Desperado",
+   "tags": [
+    "Killing"
+   ],
+   "description": "You may shoot a player at night. If they are Town, you die instead.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "deva",
+   "name": "Deva",
+   "tags": [
+    "Manipulative"
+   ],
+   "description": "Each night, choose a player. All actions on them fail and they cannot act.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "disguiser",
+   "name": "Disguiser",
+   "tags": [
+    "Misleading",
+    "Role-changing",
+    "Role Reveal"
+   ],
+   "description": "Each night, choose a player to disguise as. If they die, you take their role reveal and they appear as you.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "mafia",
+   "source": "mu"
+  },
+  {
+   "key": "dna_analyst",
+   "name": "DNA Analyst",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, examine a dead player and learn who killed them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "doctor",
+   "name": "Doctor",
+   "tags": [
+    "Protective"
+   ],
+   "description": "Each night, protect one player from night kills.",
+   "confidence": "standard",
+   "ability": "protect",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "doctor_boom",
+   "name": "Doctor Boom",
+   "tags": [
+    "Passive",
+    "Killing"
+   ],
+   "description": "You protect a player each night; if they are attacked, the attacker dies in an explosion.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "don",
+   "name": "Don",
+   "tags": [
+    "Killing",
+    "Passive",
+    "Support",
+    "Mass Effect"
+   ],
+   "description": "You lead the Mafia. While you are alive, your team has extra power, as the host describes.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "mafia",
+   "source": "mu"
+  },
+  {
+   "key": "doppelganger",
+   "name": "Doppelgänger",
+   "tags": [
+    "Misleading",
+    "Linked",
+    "Passive"
+   ],
+   "description": "You are linked to another player and copy their role and alignment.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "double_agent",
+   "name": "Double Agent",
+   "tags": [
+    "Killing",
+    "Third Party"
+   ],
+   "description": "Third party. You appear to be part of one faction but win only if you outlast everyone else.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "doublevoter",
+   "name": "Doublevoter",
+   "tags": [
+    "Voting"
+   ],
+   "description": "Your vote counts twice.",
+   "confidence": "standard",
+   "ability": "none",
+   "traits": [
+    "vote_weight_2"
+   ],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "dreamer",
+   "name": "Dreamer",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night you have a dream: you learn a list of players, at least one of whom is (or isn't) scum.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "duelist",
+   "name": "Duelist",
+   "tags": [
+    "Killing"
+   ],
+   "description": "Once per game, challenge a player to a duel during the day. One of you dies, decided by the host.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "duke",
+   "name": "Duke",
+   "tags": [
+    "Voting",
+    "Mass Effect"
+   ],
+   "description": "Your vote has extra weight, and you can affect how everyone votes, as the host describes.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "duplicate",
+   "name": "Duplicate",
+   "tags": [
+    "Power-gaining"
+   ],
+   "description": "Choose a player once. You become a copy of their role.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "electrician",
+   "name": "Electrician",
+   "tags": [
+    "Informative",
+    "Passive"
+   ],
+   "description": "You are told when the power goes out (actions fail) or comes back, as the host describes.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "electromaniac",
+   "name": "Electromaniac",
+   "tags": [
+    "Killing"
+   ],
+   "description": "Each night, charge a player. If two charged players visit each other, both die.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "emissary",
+   "name": "Emissary",
+   "tags": [
+    "Informative",
+    "Passive"
+   ],
+   "description": "You learn which faction a player belongs to when they target you.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "enabler",
+   "name": "Enabler",
+   "tags": [
+    "Passive",
+    "Support"
+   ],
+   "description": "Your teammates' abilities only work while you are alive.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "enchantress",
+   "name": "Enchantress",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, enchant a player and learn their role.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "encryptor",
+   "name": "Encryptor",
+   "tags": [
+    "Communicative",
+    "Passive",
+    "Support",
+    "Mass Effect"
+   ],
+   "description": "Your team's private chat cannot be read or intercepted by any role.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "escape_artist",
+   "name": "Escape Artist",
+   "tags": [
+    "Voting",
+    "Passive",
+    "Role Reveal"
+   ],
+   "description": "If you are lynched, you escape: you survive, but your role is revealed.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "evangelistic_townie",
+   "name": "Evangelistic Townie",
+   "tags": [
+    "Passive",
+    "Misleading"
+   ],
+   "description": "You are Town but appear as a Cult member to investigations.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "evil_mastermind",
+   "name": "Evil Mastermind",
+   "tags": [
+    "Killing",
+    "Role-changing",
+    "Communicative",
+    "Third Party",
+    "Linked"
+   ],
+   "description": "Third party. You command a minion; you win if you and your minion outlast everyone.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "evil_minion",
+   "name": "Evil Minion",
+   "tags": [
+    "Communicative",
+    "Killing",
+    "Third Party",
+    "Linked"
+   ],
+   "description": "Third party. You serve the Evil Mastermind and win with them; you may kill on their orders.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "executioner_b",
+   "name": "Executioner B",
+   "tags": [
+    "Killing",
+    "Voting"
+   ],
+   "description": "You may kill a player during the day, or carry out a lynch yourself, as the host describes.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "fabricator",
+   "name": "Fabricator",
+   "tags": [
+    "Misleading"
+   ],
+   "description": "Each night, give a player a fake item that looks real but does nothing.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "faith_healer",
+   "name": "Faith Healer",
+   "tags": [
+    "Protective"
+   ],
+   "description": "Each night, protect a player from night kills. Your protection only works some of the time.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "false_inventor",
+   "name": "False Inventor",
+   "tags": [
+    "Misleading"
+   ],
+   "description": "You hand out items that do not work, but appear to.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "fat_townie",
+   "name": "Fat Townie",
+   "tags": [
+    "Protective",
+    "Passive"
+   ],
+   "description": "It takes two kills to kill you at night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "fbi_agent",
+   "name": "FBI Agent",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, investigate a player and learn whether they are in a faction.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "fiddler",
+   "name": "Fiddler",
+   "tags": [
+    "Manipulative"
+   ],
+   "description": "Each night, choose a player. Investigations on them return confused or random results.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "firearms_inspector",
+   "name": "Firearms Inspector",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, investigate a player and learn whether they have a gun or killing ability.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "firefighter",
+   "name": "Firefighter",
+   "tags": [
+    "Protective"
+   ],
+   "description": "Each night, protect a player from fire (Arsonist ignition) or clean off gasoline.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "fisherman",
+   "name": "Fisherman",
+   "tags": [
+    "Multi-power"
+   ],
+   "description": "Each night, cast a line for a random effect or item, as the host describes.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "fixer",
+   "name": "Fixer",
+   "tags": [
+    "Support"
+   ],
+   "description": "Each night, fix a player: undo an effect placed on them (douse, poison, frame, etc.).",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "flavor_cop",
+   "name": "Flavor Cop",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, investigate a player and learn their character/flavor name rather than their role.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "fog",
+   "name": "Fog",
+   "tags": [
+    "Mass Effect",
+    "Support"
+   ],
+   "description": "Once per game, cover the town in fog: investigations fail that night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "follower",
+   "name": "Follower",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, follow a player and learn what kind of action they performed.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "forensic_investigator",
+   "name": "Forensic Investigator",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, examine a dead player and learn who visited them on the night they died.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "forensic_scientist",
+   "name": "Forensic Scientist",
+   "tags": [
+    "Passive",
+    "Support",
+    "Mass Effect",
+    "Role Reveal"
+   ],
+   "description": "When a player dies, everyone learns how they died.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "forger",
+   "name": "Forger",
+   "tags": [
+    "Manipulative"
+   ],
+   "description": "Choose a player; if they die, their role is revealed as one of your choosing.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "mafia",
+   "source": "mu"
+  },
+  {
+   "key": "forgetful_townie",
+   "name": "Forgetful Townie",
+   "tags": [
+    "Other"
+   ],
+   "description": "You are a Townie who sometimes forgets what you learned; the host may hide information from you.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "framer",
+   "name": "Framer",
+   "tags": [
+    "Misleading"
+   ],
+   "description": "Each night, frame a player so they appear guilty to investigations that night.",
+   "confidence": "standard",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "mafia",
+   "source": "mu"
+  },
+  {
+   "key": "freelancer",
+   "name": "Freelancer",
+   "tags": [
+    "Mission",
+    "Third Party"
+   ],
+   "description": "Third party. You have a mission given by the host; complete it to win.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "freezer",
+   "name": "Freezer",
+   "tags": [
+    "Manipulative"
+   ],
+   "description": "Each night, freeze a player: they cannot act or be targeted.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "friendly_neighbor",
+   "name": "Friendly Neighbor",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, reveal yourself as Town to a player you pick.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "friendly_neighborizer",
+   "name": "Friendly Neighborizer",
+   "tags": [
+    "Communicative"
+   ],
+   "description": "Each night, choose a player. They become a Friendly Neighbor and can confirm themselves to someone.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "frontrunner",
+   "name": "Frontrunner",
+   "tags": [
+    "Third Party",
+    "Mission"
+   ],
+   "description": "Third party. You win if you are the player with the most votes at the end of a day, as the host describes.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "fruit_vendor",
+   "name": "Fruit Vendor",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, give a player fruit. It does nothing, but they are told they received it.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "gallis",
+   "name": "Gallis",
+   "tags": [
+    "Voting",
+    "Passive"
+   ],
+   "description": "Your vote counts for more the closer the day is to ending, as the host describes.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "gambler",
+   "name": "Gambler",
+   "tags": [
+    "Mission",
+    "Power-gaining"
+   ],
+   "description": "Each night, make a bet with the host. Win, and you gain a power; lose, and you lose one.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "ghost",
+   "name": "Ghost",
+   "tags": [
+    "Informative"
+   ],
+   "description": "When you die, you can still haunt: each night you may learn information about a player.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "gladiator",
+   "name": "Gladiator",
+   "tags": [
+    "Voting"
+   ],
+   "description": "During the day, you can challenge a player; votes decide which of you is lynched.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "godfather",
+   "name": "Godfather",
+   "tags": [
+    "Passive",
+    "Misleading"
+   ],
+   "description": "The Mafia leader. You appear innocent to alignment investigations.",
+   "confidence": "standard",
+   "ability": "none",
+   "traits": [
+    "detect_immune"
+   ],
+   "alignment_hint": "mafia",
+   "source": "mu"
+  },
+  {
+   "key": "governor",
+   "name": "Governor",
+   "tags": [
+    "Voting"
+   ],
+   "description": "Can overturn or force a lynch, typically once per game.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "gramps",
+   "name": "Gramps",
+   "tags": [
+    "Passive",
+    "Protective",
+    "Informative"
+   ],
+   "description": "You are an old man who kills anyone who visits you at night, and learns their role.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "gravedigger",
+   "name": "Gravedigger",
+   "tags": [
+    "Passive",
+    "Misleading"
+   ],
+   "description": "You may dig up a dead player's role; you appear as a different role to investigations.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "great_teacher",
+   "name": "Great Teacher",
+   "tags": [
+    "Role-changing",
+    "Support"
+   ],
+   "description": "Each night, teach a player: they gain a new ability or improve theirs.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "green_goo",
+   "name": "Green Goo",
+   "tags": [
+    "Passive",
+    "Role-changing"
+   ],
+   "description": "When a player targets you, they become Green Goo.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "guardian_angel",
+   "name": "Guardian Angel",
+   "tags": [
+    "Mission",
+    "Third Party",
+    "Protective",
+    "Linked"
+   ],
+   "description": "Third party. You are assigned someone to protect. You win if they survive to the end.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "gunsmith",
+   "name": "Gunsmith",
+   "tags": [
+    "Support",
+    "Killing"
+   ],
+   "description": "Each night, give a player a gun they can use to shoot someone.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "hacker",
+   "name": "Hacker",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, hack a player and learn their messages or their role.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "hammerer",
+   "name": "Hammerer",
+   "tags": [
+    "Voting",
+    "Passive"
+   ],
+   "description": "Your vote ends the day immediately when it reaches a lynch.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "hated",
+   "name": "Hated",
+   "tags": [
+    "Passive",
+    "Voting"
+   ],
+   "description": "It takes one fewer vote than normal to lynch you.",
+   "confidence": "standard",
+   "ability": "none",
+   "traits": [
+    "hated"
+   ],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "healer",
+   "name": "Healer",
+   "tags": [
+    "Protective"
+   ],
+   "description": "Each night, protect one player from night kills.",
+   "confidence": "standard",
+   "ability": "protect",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "hero",
+   "name": "Hero",
+   "tags": [
+    "Passive",
+    "Killing"
+   ],
+   "description": "If a player you are guarding is attacked, you kill the attacker.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "hider",
+   "name": "Hider",
+   "tags": [
+    "Informative",
+    "Protective"
+   ],
+   "description": "Hide behind a player at night. If they die, you die too.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "hippie",
+   "name": "Hippie",
+   "tags": [
+    "Passive",
+    "Role-changing"
+   ],
+   "description": "You cannot be converted, and peace follows you (killing actions near you may fail).",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "hirsute_townie",
+   "name": "Hirsute Townie",
+   "tags": [
+    "Passive",
+    "Misleading"
+   ],
+   "description": "You are Town but appear as a Werewolf to investigations.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "hitman",
+   "name": "Hitman",
+   "tags": [
+    "Support"
+   ],
+   "description": "You carry out a kill for your team on a target someone else picks.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "mafia",
+   "source": "mu"
+  },
+  {
+   "key": "hobo",
+   "name": "Hobo",
+   "tags": [
+    "Informative",
+    "Passive"
+   ],
+   "description": "Each night, sleep at a player's house. You learn who visited them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "hollow_man",
+   "name": "Hollow Man",
+   "tags": [
+    "Passive"
+   ],
+   "description": "You are an empty shell with no role; if investigated, you show nothing.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "hoodlum",
+   "name": "Hoodlum",
+   "tags": [
+    "Third Party",
+    "Mission"
+   ],
+   "description": "Third party. You are given targets; you win if they are dead at the end of the game.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "hot_potato",
+   "name": "Hot Potato",
+   "tags": [
+    "Manipulative"
+   ],
+   "description": "Each night, pass the potato to a player. Whoever holds it at a set time dies.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "hunter",
+   "name": "Hunter",
+   "tags": [
+    "Killing"
+   ],
+   "description": "When you die, you may take someone with you.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "hypnotist",
+   "name": "Hypnotist",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, hypnotize a player: they learn false information you choose.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "hypochondriac",
+   "name": "Hypochondriac",
+   "tags": [
+    "Other"
+   ],
+   "description": "You believe you are sick: you are told you were attacked when you were not.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "illusionist",
+   "name": "Illusionist",
+   "tags": [
+    "Killing",
+    "Misleading"
+   ],
+   "description": "Each night, kill a player and make it look like someone else did it, or make your kill appear as a different cause.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "immunizer",
+   "name": "Immunizer",
+   "tags": [
+    "Protective",
+    "Support"
+   ],
+   "description": "Each night, immunize a player against conversion, poison or infection.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "inactivity_vigilante",
+   "name": "Inactivity Vigilante",
+   "tags": [
+    "Killing"
+   ],
+   "description": "You may kill players who have been inactive, as the host's rules describe.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "indecisive_voter",
+   "name": "Indecisive Voter",
+   "tags": [
+    "Voting"
+   ],
+   "description": "Your vote only counts if you have not changed it during the day.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "innocence_cop",
+   "name": "Innocence Cop",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, investigate a player and learn only whether they are innocent (a guilty result shows nothing).",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "innocent_child",
+   "name": "Innocent Child",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Once per game, reveal yourself: the host confirms you as Town to everyone.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "inquisitor",
+   "name": "Inquisitor",
+   "tags": [
+    "Killing",
+    "Role-changing",
+    "Third Party"
+   ],
+   "description": "Third party. Each night, accuse a player: if they are a certain role, they die or are converted.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "insane_cop",
+   "name": "Insane Cop",
+   "tags": [
+    "Misleading",
+    "Informative"
+   ],
+   "description": "Investigates alignment, but every result is the opposite of the truth. You are not told this.",
+   "confidence": "standard",
+   "ability": "insane_investigate",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "insane_doctor",
+   "name": "Insane Doctor",
+   "tags": [
+    "Protective",
+    "Killing"
+   ],
+   "description": "You think you're a Doctor, but your protection may kill the player instead.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "insomniac",
+   "name": "Insomniac",
+   "tags": [
+    "Informative",
+    "Passive"
+   ],
+   "description": "You stay awake at night: you learn whether anyone visited you.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "interceptor",
+   "name": "Interceptor",
+   "tags": [
+    "Killing",
+    "Manipulative"
+   ],
+   "description": "Each night, intercept a player's visitors: the first person to visit them is killed.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "inventor",
+   "name": "Inventor",
+   "tags": [
+    "Support"
+   ],
+   "description": "Each night, give a player an item you invented (gun, vest, etc., as the host lists).",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "ita_doctor",
+   "name": "ITA Doctor",
+   "tags": [
+    "Protective"
+   ],
+   "description": "In ITA (in-thread attack) games, you can protect players from in-thread shots.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "ita_master",
+   "name": "ITA Master",
+   "tags": [
+    "Killing"
+   ],
+   "description": "In ITA games, your in-thread shots are stronger or more frequent.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "ita_nerfer",
+   "name": "ITA Nerfer",
+   "tags": [
+    "Support"
+   ],
+   "description": "In ITA games, you reduce another player's chance of hitting with in-thread shots.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "ita_sniper",
+   "name": "ITA Sniper",
+   "tags": [
+    "Killing"
+   ],
+   "description": "In ITA games, your in-thread shots always hit.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "ita_trainer",
+   "name": "ITA Trainer",
+   "tags": [
+    "Support"
+   ],
+   "description": "In ITA games, you improve another player's in-thread shot chance.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "item_thief",
+   "name": "Item Thief",
+   "tags": [
+    "Manipulative"
+   ],
+   "description": "Each night, steal an item from a player.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "jack_of_all_trades",
+   "name": "Jack of All Trades",
+   "tags": [
+    "Multi-power"
+   ],
+   "description": "You have several one-shot abilities (e.g. one kill, one protect, one investigation).",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "jailkeeper",
+   "name": "Jailkeeper",
+   "tags": [
+    "Protective",
+    "Manipulative"
+   ],
+   "description": "Each night, jail one player: they are protected from kills and cannot act.",
+   "confidence": "standard",
+   "ability": "jail",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "janitor",
+   "name": "Janitor",
+   "tags": [
+    "Manipulative",
+    "Role Reveal"
+   ],
+   "description": "When the Mafia kills someone you choose to clean, their role is hidden from everyone but you.",
+   "confidence": "standard",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "mafia",
+   "source": "mu"
+  },
+  {
+   "key": "jester",
+   "name": "Jester",
+   "tags": [
+    "Mission",
+    "Passive",
+    "Third Party"
+   ],
+   "description": "Third party. You win if you get yourself lynched.",
+   "confidence": "standard",
+   "ability": "none",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "jester_scum",
+   "name": "Jester Scum",
+   "tags": [
+    "Passive",
+    "Misleading",
+    "Role Reveal"
+   ],
+   "description": "You are Mafia, but you appear as a Jester if investigated or revealed.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "john_doe",
+   "name": "John Doe",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Your identity is hidden: when you die, your role isn't revealed.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "joker",
+   "name": "Joker",
+   "tags": [
+    "Role-changing",
+    "Power-gaining"
+   ],
+   "description": "Each night, swap abilities with a player.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "journalist",
+   "name": "Journalist",
+   "tags": [
+    "Posting"
+   ],
+   "description": "Once per game, publish a story: post a message through the host to everyone.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "judas",
+   "name": "Judas",
+   "tags": [
+    "Passive",
+    "Role-changing"
+   ],
+   "description": "You are Town, but if lynched, you become Mafia.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "judge",
+   "name": "Judge",
+   "tags": [
+    "Killing"
+   ],
+   "description": "Once per game, during the day, you may sentence a player to death.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "judicator",
+   "name": "Judicator",
+   "tags": [
+    "Protective",
+    "Manipulative"
+   ],
+   "description": "Each night, choose a player. They cannot be lynched the next day and cannot act tonight.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "keymaker",
+   "name": "Keymaker",
+   "tags": [
+    "Protective",
+    "Support"
+   ],
+   "description": "Each night, give a player a key: they can escape one attack or jail.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "kidnapper",
+   "name": "Kidnapper",
+   "tags": [
+    "Communicative"
+   ],
+   "description": "Each night, kidnap a player: you talk privately, and they cannot act.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "killjoy",
+   "name": "Killjoy",
+   "tags": [
+    "Role-changing",
+    "Support"
+   ],
+   "description": "Each night, remove a player's extra abilities or items.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "king",
+   "name": "King",
+   "tags": [
+    "Voting"
+   ],
+   "description": "Your vote decides ties, or counts extra, as the host describes.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "kingmaker",
+   "name": "Kingmaker",
+   "tags": [
+    "Voting"
+   ],
+   "description": "Once per game, choose a player to become King (extra vote power).",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "late_townie",
+   "name": "Late Townie",
+   "tags": [
+    "Other"
+   ],
+   "description": "You are told your role late: you receive your role PM after the first day or night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "lawyer",
+   "name": "Lawyer",
+   "tags": [
+    "Misleading"
+   ],
+   "description": "Each night, pick a player; they appear innocent to investigations that night.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "mafia",
+   "source": "mu"
+  },
+  {
+   "key": "lazy_vigilante",
+   "name": "Lazy Vigilante",
+   "tags": [
+    "Killing"
+   ],
+   "description": "You may kill a player, but only every other night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "leader",
+   "name": "Leader",
+   "tags": [
+    "Passive",
+    "Mass Effect"
+   ],
+   "description": "While you are alive, your faction's actions get a bonus, as the host describes.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "legal_archivist",
+   "name": "Legal Archivist",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, look up a player's past actions or votes.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "leprechaun",
+   "name": "Leprechaun",
+   "tags": [
+    "Redirection",
+    "Multi-targeting"
+   ],
+   "description": "Each night, move a player's action to a random target.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "lie_detector",
+   "name": "Lie Detector",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each day, check whether a player's claim is true.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "lightning_rod",
+   "name": "Lightning Rod",
+   "tags": [
+    "Redirection"
+   ],
+   "description": "All kills on a chosen player are moved to you.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "little_girl",
+   "name": "Little Girl",
+   "tags": [
+    "Informative",
+    "Passive"
+   ],
+   "description": "You can peek at the Mafia's chat at night, but risk being caught.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "loner",
+   "name": "Loner",
+   "tags": [
+    "Other"
+   ],
+   "description": "You win if you survive and none of your teammates do.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "lost_mason",
+   "name": "Lost Mason",
+   "tags": [
+    "Linked",
+    "Communicative",
+    "Passive"
+   ],
+   "description": "You are a Mason but don't know the other Masons.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "lottery_winner",
+   "name": "Lottery Winner",
+   "tags": [
+    "Passive",
+    "Support"
+   ],
+   "description": "At some point in the game, you receive a random power.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "loudmouth",
+   "name": "Loudmouth",
+   "tags": [
+    "Passive"
+   ],
+   "description": "When you are targeted at night, everyone learns who targeted you.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "loved",
+   "name": "Loved",
+   "tags": [
+    "Passive",
+    "Voting"
+   ],
+   "description": "It takes one more vote than normal to lynch you.",
+   "confidence": "standard",
+   "ability": "none",
+   "traits": [
+    "loved"
+   ],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "lover",
+   "name": "Lover",
+   "tags": [
+    "Communicative",
+    "Linked"
+   ],
+   "description": "You are linked to another player. If one Lover dies, the other dies too.",
+   "confidence": "standard",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "lumberjack",
+   "name": "Lumberjack",
+   "tags": [
+    "Role-changing"
+   ],
+   "description": "Each night, chop at a player's role: they lose part of their ability.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "lycan",
+   "name": "Lycan",
+   "tags": [
+    "Third Party",
+    "Killing"
+   ],
+   "description": "You are a werewolf who doesn't know it: you appear as a Werewolf to investigations.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "elimination_bait",
+   "name": "Elimination Bait",
+   "tags": [
+    "Passive",
+    "Mass Effect"
+   ],
+   "description": "If you are lynched, someone else dies too (the host decides who, or a random voter).",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "eliminated",
+   "name": "Eliminated",
+   "tags": [
+    "Mission",
+    "Linked"
+   ],
+   "description": "You are linked to a mission: you win if a specific player is lynched.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "executioner_ba",
+   "name": "Executioner BA",
+   "tags": [
+    "Mission",
+    "Linked",
+    "Third Party"
+   ],
+   "description": "Third party. You are given a target; you win if they are lynched.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "lynchproof",
+   "name": "Lynchproof",
+   "tags": [
+    "Protective"
+   ],
+   "description": "You cannot be lynched; if you are, you survive.",
+   "confidence": "standard",
+   "ability": "none",
+   "traits": [
+    "lynchproof"
+   ],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "macho_cop",
+   "name": "Macho Cop",
+   "tags": [
+    "Informative"
+   ],
+   "description": "You investigate alignment each night, but you cannot be protected.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "mad_gunman",
+   "name": "Mad Gunman",
+   "tags": [
+    "Killing"
+   ],
+   "description": "You have a gun that fires at random players.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "mad_scientist",
+   "name": "Mad Scientist",
+   "tags": [
+    "Role-changing"
+   ],
+   "description": "Each night, experiment on a player: their role changes in a random way.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "mafia_goon",
+   "name": "Mafia Goon",
+   "tags": [
+    "Other"
+   ],
+   "description": "No ability beyond the Mafia's shared night kill and private chat.",
+   "confidence": "standard",
+   "ability": "none",
+   "traits": [],
+   "alignment_hint": "mafia",
+   "source": "mu"
+  },
+  {
+   "key": "magistrate",
+   "name": "Magistrate",
+   "tags": [
+    "Voting"
+   ],
+   "description": "You can cancel a lynch once per game.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "magnet",
+   "name": "Magnet",
+   "tags": [
+    "Redirection"
+   ],
+   "description": "All actions aimed at players near a chosen player go to them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "martyr",
+   "name": "Martyr",
+   "tags": [
+    "Mass Effect",
+    "Killing",
+    "Protective"
+   ],
+   "description": "Sacrifice yourself to save another player.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "mason",
+   "name": "Mason",
+   "tags": [
+    "Communicative",
+    "Linked"
+   ],
+   "description": "You know the other Masons and share a private chat. All Masons are confirmed Town to each other.",
+   "confidence": "standard",
+   "ability": "none",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "mason_finder",
+   "name": "Mason Finder",
+   "tags": [
+    "Linked",
+    "Communicative"
+   ],
+   "description": "Each night, check a player to see if they are a Mason.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "masonizer",
+   "name": "Masonizer",
+   "tags": [
+    "Communicative"
+   ],
+   "description": "Each night, make a player a Mason; they join your private chat.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "mass_murderer",
+   "name": "Mass Murderer",
+   "tags": [
+    "Killing",
+    "Third Party"
+   ],
+   "description": "Third party. Visit a house at night and kill everyone there.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "match_finder",
+   "name": "Match Finder",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, check two players: you learn whether they are on the same side.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "mediator",
+   "name": "Mediator",
+   "tags": [
+    "Multi-power",
+    "Protective",
+    "Manipulative"
+   ],
+   "description": "You have a few abilities that help settle disputes: protecting, blocking, or swapping.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "medicine_man",
+   "name": "Medicine Man",
+   "tags": [
+    "Misleading"
+   ],
+   "description": "You think you're a Doctor, but your treatment has random effects.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "medium",
+   "name": "Medium",
+   "tags": [
+    "Communicative",
+    "Informative"
+   ],
+   "description": "You can speak with the dead at night.",
+   "confidence": "standard",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "megaman",
+   "name": "Megaman",
+   "tags": [
+    "Killing",
+    "Role-changing",
+    "Power-gaining"
+   ],
+   "description": "Each time you kill someone, you gain their ability.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "mentalist",
+   "name": "Mentalist",
+   "tags": [
+    "Informative",
+    "Multi-targeting"
+   ],
+   "description": "Each night, choose two players and learn whether they are on the same side.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "messenger",
+   "name": "Messenger",
+   "tags": [
+    "Communicative"
+   ],
+   "description": "Each night, deliver a message from one player to another.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "methodical_cop",
+   "name": "Methodical Cop",
+   "tags": [
+    "Informative"
+   ],
+   "description": "You investigate a player over several nights; the result comes when you finish.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "miller",
+   "name": "Miller",
+   "tags": [
+    "Passive",
+    "Misleading"
+   ],
+   "description": "An innocent Townie who appears guilty to alignment investigations.",
+   "confidence": "standard",
+   "ability": "none",
+   "traits": [
+    "suspicious"
+   ],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "millionaire",
+   "name": "Millionaire",
+   "tags": [
+    "Other"
+   ],
+   "description": "You have money: you can buy items or votes from the host.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "mime",
+   "name": "Mime",
+   "tags": [
+    "Mission",
+    "Communicative",
+    "Third Party"
+   ],
+   "description": "Third party. You may not speak; you win if you survive.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "mimic",
+   "name": "Mimic",
+   "tags": [
+    "Role-changing",
+    "Informative"
+   ],
+   "description": "Each night, choose a player and copy their role.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "mind_controller",
+   "name": "Mind Controller",
+   "tags": [
+    "Redirection"
+   ],
+   "description": "Each night, take control of a player: you choose their target.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "mirror",
+   "name": "Mirror",
+   "tags": [
+    "Passive",
+    "Redirection"
+   ],
+   "description": "Actions aimed at you are reflected back at the player who sent them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "mirror_maker",
+   "name": "Mirror Maker",
+   "tags": [
+    "Redirection",
+    "Killing"
+   ],
+   "description": "Each night, give a player a mirror: the next action on them is reflected.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "mistletoe",
+   "name": "Mistletoe",
+   "tags": [
+    "Mission",
+    "Third Party",
+    "Informative",
+    "Multi-targeting"
+   ],
+   "description": "Third party. Choose two players to kiss; you win if they survive together.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "modifier",
+   "name": "Modifier",
+   "tags": [
+    "Manipulative",
+    "Support"
+   ],
+   "description": "Each night, add a modifier (e.g. Bulletproof, Ninja) to a player.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "modposter",
+   "name": "Modposter",
+   "tags": [
+    "Posting"
+   ],
+   "description": "You can post one message per game as if you were the host.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "monitor",
+   "name": "Monitor",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, learn how many players visited a chosen player.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "monk",
+   "name": "Monk",
+   "tags": [
+    "Third Party",
+    "Mission",
+    "Protective"
+   ],
+   "description": "Third party. You protect players at night; you win if you survive.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "moon_wolf",
+   "name": "Moon Wolf",
+   "tags": [
+    "Third Party",
+    "Killing"
+   ],
+   "description": "Third party. You kill at night on full-moon nights only.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "morpher",
+   "name": "Morpher",
+   "tags": [
+    "Misleading"
+   ],
+   "description": "Each night, take on the appearance of another role.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "mortician",
+   "name": "Mortician",
+   "tags": [
+    "Informative",
+    "Role Reveal"
+   ],
+   "description": "Each night, learn the role of a dead player, even if it was hidden.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "motion_detector",
+   "name": "Motion Detector",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, learn whether a player moved (performed an action).",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "motivator",
+   "name": "Motivator",
+   "tags": [
+    "Support"
+   ],
+   "description": "Each night, motivate a player: their action can't be blocked.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "mugger",
+   "name": "Mugger",
+   "tags": [
+    "Power-gaining"
+   ],
+   "description": "Each night, steal a player's ability for yourself for one night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "multi_doctor",
+   "name": "Multi Doctor",
+   "tags": [
+    "Protective"
+   ],
+   "description": "Each night, protect more than one player.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "muse",
+   "name": "Muse",
+   "tags": [
+    "Support",
+    "Passive"
+   ],
+   "description": "While you are alive, a chosen player's ability is stronger.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "mute",
+   "name": "Mute",
+   "tags": [
+    "Voting"
+   ],
+   "description": "You cannot vote.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "mystic",
+   "name": "Mystic",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, learn whether a player is a power role.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "naive_cop",
+   "name": "Naive Cop",
+   "tags": [
+    "Informative",
+    "Misleading"
+   ],
+   "description": "Investigates alignment, but every result comes back innocent. You are not told this.",
+   "confidence": "standard",
+   "ability": "naive_investigate",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "naive_doctor",
+   "name": "Naive Doctor",
+   "tags": [
+    "Protective",
+    "Misleading"
+   ],
+   "description": "You protect a player each night, but you are told every protection succeeded whether or not it did.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "neapolitan",
+   "name": "Neapolitan",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, investigate a player and learn whether they are a Vanilla Townie.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "necromancer",
+   "name": "Necromancer",
+   "tags": [
+    "Support"
+   ],
+   "description": "Each night, raise a dead player to use their ability once.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "neighbor",
+   "name": "Neighbor",
+   "tags": [
+    "Communicative"
+   ],
+   "description": "You share a private chat with one or more other players.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "neighborhood_watchman",
+   "name": "Neighborhood Watchman",
+   "tags": [
+    "Informative",
+    "Communicative",
+    "Linked"
+   ],
+   "description": "You share a chat with other watchmen and learn who visits the players you watch.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "neighborizer",
+   "name": "Neighborizer",
+   "tags": [
+    "Communicative"
+   ],
+   "description": "Each night, add a player to your private chat.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "neutralizer",
+   "name": "Neutralizer",
+   "tags": [
+    "Informative",
+    "Killing"
+   ],
+   "description": "Each night, investigate a player; if they are a third party, they die.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "nexus",
+   "name": "Nexus",
+   "tags": [
+    "Passive",
+    "Redirection"
+   ],
+   "description": "Actions aimed at you are redirected to a random player.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "ninja",
+   "name": "Ninja",
+   "tags": [
+    "Passive",
+    "Misleading"
+   ],
+   "description": "Trackers and Watchers do not see your visits.",
+   "confidence": "standard",
+   "ability": "none",
+   "traits": [
+    "ninja"
+   ],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "ninja_baker",
+   "name": "Ninja Baker",
+   "tags": [
+    "Support"
+   ],
+   "description": "You hand out bread without being seen by Trackers or Watchers.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "normalizer",
+   "name": "Normalizer",
+   "tags": [
+    "Manipulative",
+    "Role-changing"
+   ],
+   "description": "Each night, turn a player into a vanilla role of their alignment.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "nurse",
+   "name": "Nurse",
+   "tags": [
+    "Protective"
+   ],
+   "description": "You become a Doctor if the Doctor dies.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "nymphomaniac",
+   "name": "Nymphomaniac",
+   "tags": [
+    "Communicative"
+   ],
+   "description": "Each night, visit a player: you share a private chat with them that night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "observer",
+   "name": "Observer",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, learn the role of a player who acted on a target you choose.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "old_man",
+   "name": "Old Man",
+   "tags": [
+    "Other"
+   ],
+   "description": "You have no ability; you may die of old age on a set night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "oracle",
+   "name": "Oracle",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Choose a player each night; if you die, their role or alignment is revealed.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "pacifist",
+   "name": "Pacifist",
+   "tags": [
+    "Protective",
+    "Manipulative",
+    "Mass Effect"
+   ],
+   "description": "While you are alive, no one can be killed at night on a set night, as the host describes.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "paparazzi",
+   "name": "Paparazzi",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, follow a player and learn everyone they interacted with.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "paralyzer",
+   "name": "Paralyzer",
+   "tags": [
+    "Voting",
+    "Mass Effect"
+   ],
+   "description": "Once per game, paralyze voting: no lynch can happen that day.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "paranoid_bat_owner",
+   "name": "Paranoid Bat Owner",
+   "tags": [
+    "Passive",
+    "Manipulative"
+   ],
+   "description": "Anyone who visits you at night is roleblocked.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "paranoid_cop",
+   "name": "Paranoid Cop",
+   "tags": [
+    "Informative",
+    "Misleading"
+   ],
+   "description": "Investigates alignment, but every result comes back guilty. You are not told this.",
+   "confidence": "standard",
+   "ability": "paranoid_investigate",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "paranoid_doctor",
+   "name": "Paranoid Doctor",
+   "tags": [
+    "Protective",
+    "Manipulative",
+    "Misleading"
+   ],
+   "description": "You protect a player each night, but you may block them instead.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "paranoid_gun_owner",
+   "name": "Paranoid Gun Owner",
+   "tags": [
+    "Passive",
+    "Killing"
+   ],
+   "description": "You kill anyone who visits you at night.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "parasite",
+   "name": "Parasite",
+   "tags": [
+    "Misleading"
+   ],
+   "description": "Attach yourself to a player; you appear as their role to investigations.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "parity_cop",
+   "name": "Parity Cop",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, investigate a player. You learn whether they share an alignment with the player you checked the night before.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "parrot",
+   "name": "Parrot",
+   "tags": [
+    "Power-gaining"
+   ],
+   "description": "Each night, copy the last ability used on you.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "party_host",
+   "name": "Party Host",
+   "tags": [
+    "Communicative",
+    "Mass Effect"
+   ],
+   "description": "Once per game, throw a party: chosen players share a private chat that night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "pathologist",
+   "name": "Pathologist",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, examine a dead player and learn their role and who visited them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "peeping_tom",
+   "name": "Peeping Tom",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, watch a player and learn who visited them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "penguin",
+   "name": "Penguin",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, learn whether a player is cold-blooded (killing role) or not.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "personal_bodyguard",
+   "name": "Personal Bodyguard",
+   "tags": [
+    "Protective",
+    "Passive",
+    "Linked"
+   ],
+   "description": "You guard one specific player for the whole game; you die in their place if they're attacked.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "pirate_baker",
+   "name": "Pirate Baker",
+   "tags": [
+    "Support",
+    "Manipulative"
+   ],
+   "description": "You hand out bread that also roleblocks the receiver.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "points_sacrificer",
+   "name": "Points Sacrificer",
+   "tags": [
+    "Multi-power"
+   ],
+   "description": "You have points to spend on abilities; spending them uses up your power.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "poisoner",
+   "name": "Poisoner",
+   "tags": [
+    "Killing"
+   ],
+   "description": "Each night, poison a player. They die at the end of the next day unless cured.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "police_commissioner",
+   "name": "Police Commissioner",
+   "tags": [
+    "Informative"
+   ],
+   "description": "You receive copies of investigation results from Cops.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "politician",
+   "name": "Politician",
+   "tags": [
+    "Voting",
+    "Third Party",
+    "Role-changing"
+   ],
+   "description": "Third party. You win if you are alive and have a lot of votes when the game ends.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "pollster",
+   "name": "Pollster",
+   "tags": [
+    "Voting",
+    "Mass Effect"
+   ],
+   "description": "Each night, learn how many players would vote for a given player.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "pope",
+   "name": "Pope",
+   "tags": [
+    "Protective",
+    "Mass Effect"
+   ],
+   "description": "Once per game, protect everyone from conversion that night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "possessor",
+   "name": "Possessor",
+   "tags": [
+    "Role-changing"
+   ],
+   "description": "Each night, possess a player and use their ability.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "president",
+   "name": "President",
+   "tags": [
+    "Linked"
+   ],
+   "description": "You are a key Town figure. If you die, the Town loses (or something bad happens, as the host describes).",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "pretender",
+   "name": "Pretender",
+   "tags": [
+    "Role-changing",
+    "Multi-power",
+    "Power-gaining"
+   ],
+   "description": "You pretend to have a role and gain its abilities over time.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "priest",
+   "name": "Priest",
+   "tags": [
+    "Protective"
+   ],
+   "description": "Each night, protect a player from conversion or recruitment.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "princess",
+   "name": "Princess",
+   "tags": [
+    "Passive",
+    "Mass Effect"
+   ],
+   "description": "While you are alive, a chosen faction is protected in some way.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "private_investigator",
+   "name": "Private Investigator",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, investigate a player and learn their role and alignment.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "probate_lawyer",
+   "name": "Probate Lawyer",
+   "tags": [
+    "Support",
+    "Passive",
+    "Mass Effect"
+   ],
+   "description": "When a player dies, you inherit their items.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "prober",
+   "name": "Prober",
+   "tags": [
+    "Informative",
+    "Manipulative"
+   ],
+   "description": "Each night, probe a player: you learn their action and block it.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "producer",
+   "name": "Producer",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, learn the number of players who acted that night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "prophet",
+   "name": "Prophet",
+   "tags": [
+    "Mission",
+    "Third Party"
+   ],
+   "description": "Third party. Predict an event; you win if it happens.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "protector",
+   "name": "Protector",
+   "tags": [
+    "Support"
+   ],
+   "description": "Each night, protect a player from a non-killing action.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "proxy",
+   "name": "Proxy",
+   "tags": [
+    "Informative",
+    "Passive",
+    "Linked"
+   ],
+   "description": "You are linked to another player and receive their results.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "pseudojester",
+   "name": "Pseudojester",
+   "tags": [
+    "Role-changing",
+    "Mission",
+    "Third Party"
+   ],
+   "description": "Third party. You win if lynched, but you can change sides if a condition is met.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "psychiatrist",
+   "name": "Psychiatrist",
+   "tags": [
+    "Support",
+    "Role-changing"
+   ],
+   "description": "Each night, treat a player: you cure them of insanity or other effects.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "psychic",
+   "name": "Psychic",
+   "tags": [
+    "Informative",
+    "Passive"
+   ],
+   "description": "You receive visions: the host tells you information about a random player each night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "psychopath",
+   "name": "Psychopath",
+   "tags": [
+    "Killing"
+   ],
+   "description": "A killer who must kill every night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "psychotrooper",
+   "name": "Psychotrooper",
+   "tags": [
+    "Misleading",
+    "Passive",
+    "Third Party",
+    "Mass Effect"
+   ],
+   "description": "Third party. You appear as a random role and may affect everyone at once.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "puppet_master",
+   "name": "Puppet Master",
+   "tags": [
+    "Redirection",
+    "Multi-targeting"
+   ],
+   "description": "Each night, control two players: one targets the other.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "purple_goo",
+   "name": "Purple Goo",
+   "tags": [
+    "Passive",
+    "Role-changing",
+    "Manipulative"
+   ],
+   "description": "When a player targets you, they become Purple Goo and lose their ability.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "rabble_rouser",
+   "name": "Rabble Rouser",
+   "tags": [
+    "Voting",
+    "Passive",
+    "Mass Effect"
+   ],
+   "description": "Once per game, start a riot: the day's lynch is decided by random vote.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "radiant",
+   "name": "Radiant",
+   "tags": [
+    "Passive",
+    "Manipulative",
+    "Redirection"
+   ],
+   "description": "Anyone who targets you is redirected to themselves.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "random_cop",
+   "name": "Random Cop",
+   "tags": [
+    "Informative",
+    "Misleading"
+   ],
+   "description": "You investigate alignment, but some results are random.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "randomizer",
+   "name": "Randomizer",
+   "tags": [
+    "Redirection"
+   ],
+   "description": "Each night, choose a player: their action goes to a random target.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "ranger",
+   "name": "Ranger",
+   "tags": [
+    "Multi-power"
+   ],
+   "description": "You have several abilities and may use one each night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "recharger",
+   "name": "Recharger",
+   "tags": [
+    "Support"
+   ],
+   "description": "Each night, recharge a player's used ability.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "recruiting_mason",
+   "name": "Recruiting Mason",
+   "tags": [
+    "Communicative",
+    "Role-changing",
+    "Informative"
+   ],
+   "description": "Each night, recruit a player into the Masons.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "red_goo",
+   "name": "Red Goo",
+   "tags": [
+    "Passive",
+    "Communicative"
+   ],
+   "description": "Players who target you are added to a private chat with you.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "redirector",
+   "name": "Redirector",
+   "tags": [
+    "Redirection"
+   ],
+   "description": "Each night, pick a player and a new target; that player's action is redirected to the new target.",
+   "confidence": "standard",
+   "ability": "redirect",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "reflector",
+   "name": "Reflector",
+   "tags": [
+    "Redirection"
+   ],
+   "description": "Actions targeting you bounce back to the player who sent them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "reflexive_doctor",
+   "name": "Reflexive Doctor",
+   "tags": [
+    "Passive",
+    "Protective"
+   ],
+   "description": "You automatically protect anyone who targets you.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "replicator",
+   "name": "Replicator",
+   "tags": [
+    "Misleading",
+    "Power-gaining",
+    "Role Reveal"
+   ],
+   "description": "When you visit a player, you copy their role and appear as it.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "reporter",
+   "name": "Reporter",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, learn what action a player took.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "restless_spirit",
+   "name": "Restless Spirit",
+   "tags": [
+    "Voting"
+   ],
+   "description": "After you die, you can still vote.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "retired_marine",
+   "name": "Retired Marine",
+   "tags": [
+    "Passive",
+    "Protective"
+   ],
+   "description": "You are bulletproof and appear as a Vanilla Townie.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "retired_werewolf_hunter",
+   "name": "Retired Werewolf Hunter",
+   "tags": [
+    "Passive",
+    "Protective"
+   ],
+   "description": "If a werewolf attacks you, you survive and it dies.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "revealer",
+   "name": "Revealer",
+   "tags": [
+    "Support",
+    "Role Reveal"
+   ],
+   "description": "Each night, choose a player. Their role is revealed publicly at the start of the next day.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "riddler",
+   "name": "Riddler",
+   "tags": [
+    "Killing",
+    "Third Party"
+   ],
+   "description": "Third party. Each night, give a player a riddle; if they fail it, they die.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "ritualist",
+   "name": "Ritualist",
+   "tags": [
+    "Support"
+   ],
+   "description": "Each night, perform a ritual to gain a power or help your faction.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "rogue",
+   "name": "Rogue",
+   "tags": [
+    "Power-gaining",
+    "Informative"
+   ],
+   "description": "Each night, steal a player's role information and gain power.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "role_cop",
+   "name": "Role Cop",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, investigate one player and learn their role (and any modifiers).",
+   "confidence": "standard",
+   "ability": "role_investigate",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "role_oracle",
+   "name": "Role Oracle",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Choose a player each night; if you die, their role is revealed publicly.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "role_reverser",
+   "name": "Role Reverser",
+   "tags": [
+    "Manipulative"
+   ],
+   "description": "Each night, reverse a player's ability (protect becomes kill, etc.).",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "role_swapper",
+   "name": "Role Swapper",
+   "tags": [
+    "Manipulative",
+    "Role-changing",
+    "Multi-targeting"
+   ],
+   "description": "Each night, swap the roles of two players.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "role_thief",
+   "name": "Role Thief",
+   "tags": [
+    "Informative",
+    "Power-gaining"
+   ],
+   "description": "Each night, steal a player's role and learn it.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "roleblocker",
+   "name": "Roleblocker",
+   "tags": [
+    "Manipulative"
+   ],
+   "description": "Each night, block one player from performing their night action.",
+   "confidence": "standard",
+   "ability": "block",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "roleblocker_bodyguard",
+   "name": "Roleblocker Bodyguard",
+   "tags": [
+    "Informative",
+    "Protective",
+    "Manipulative"
+   ],
+   "description": "Each night, guard a player; you block anyone who targets them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "rolestopper",
+   "name": "Rolestopper",
+   "tags": [
+    "Protective",
+    "Manipulative"
+   ],
+   "description": "Each night, choose a player. All actions targeting them fail.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "saboteur",
+   "name": "Saboteur",
+   "tags": [
+    "Manipulative",
+    "Killing"
+   ],
+   "description": "Each night, sabotage a player: their action fails and may harm them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "mafia",
+   "source": "mu"
+  },
+  {
+   "key": "saint",
+   "name": "Saint",
+   "tags": [
+    "Voting"
+   ],
+   "description": "If you are lynched, someone who voted for you dies.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "santa",
+   "name": "Santa",
+   "tags": [
+    "Informative",
+    "Support",
+    "Multi-targeting",
+    "Multi-power"
+   ],
+   "description": "Each night, give a player a gift (an item or extra ability).",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "sasquatch",
+   "name": "Sasquatch",
+   "tags": [
+    "Passive",
+    "Role-changing"
+   ],
+   "description": "You can't be seen: investigations on you fail.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "saulus",
+   "name": "Saulus",
+   "tags": [
+    "Passive",
+    "Role-changing"
+   ],
+   "description": "You start on one side and switch to the other after a set event.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "savior",
+   "name": "Savior",
+   "tags": [
+    "Mission",
+    "Passive",
+    "Role-changing"
+   ],
+   "description": "If a chosen player would die, you may die in their place and change sides.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "scapegoat",
+   "name": "Scapegoat",
+   "tags": [
+    "Voting",
+    "Passive"
+   ],
+   "description": "If the day ends in a tie, you are lynched.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "scavenger",
+   "name": "Scavenger",
+   "tags": [
+    "Multi-power",
+    "Informative",
+    "Power-gaining",
+    "Role Reveal"
+   ],
+   "description": "Each night, search a dead player's body for items or abilities.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "schizophrenic",
+   "name": "Schizophrenic",
+   "tags": [
+    "Multi-power"
+   ],
+   "description": "Each night, your target is chosen at random from your choices.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "scrambler",
+   "name": "Scrambler",
+   "tags": [
+    "Misleading"
+   ],
+   "description": "Each night, scramble a player: investigations on them return random results.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "secret_service_agent",
+   "name": "Secret Service Agent",
+   "tags": [
+    "Linked",
+    "Killing"
+   ],
+   "description": "You protect the President; if they are attacked, you may kill the attacker.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "secretary",
+   "name": "Secretary",
+   "tags": [
+    "Manipulative"
+   ],
+   "description": "Each night, see the actions sent to the host by a chosen player.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "security_man",
+   "name": "Security Man",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, learn who visited a chosen player and block them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "seer",
+   "name": "Seer",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, investigate one player and learn their alignment.",
+   "confidence": "standard",
+   "ability": "investigate",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "senator",
+   "name": "Senator",
+   "tags": [
+    "Voting"
+   ],
+   "description": "Your vote counts extra, and you can veto a lynch once.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "sensei",
+   "name": "Sensei",
+   "tags": [
+    "Manipulative",
+    "Support"
+   ],
+   "description": "Each night, train a player: they become immune to a block or gain an extra use.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "sensor",
+   "name": "Sensor",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, sense whether a player is a power role.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "seraph_knight",
+   "name": "Seraph Knight",
+   "tags": [
+    "Protective"
+   ],
+   "description": "You protect a player each night and kill the first attacker.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "serial_killer",
+   "name": "Serial Killer",
+   "tags": [
+    "Killing"
+   ],
+   "description": "A lone killer. Kill one player each night. You win when you are the last one standing.",
+   "confidence": "standard",
+   "ability": "kill",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "shaman",
+   "name": "Shaman",
+   "tags": [
+    "Support"
+   ],
+   "description": "Each night, use a ritual to help a player.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "shapeshifter",
+   "name": "Shapeshifter",
+   "tags": [
+    "Misleading",
+    "Role Reveal"
+   ],
+   "description": "Each night, take a player's appearance: you appear as their role if investigated or killed.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "sheriff",
+   "name": "Sheriff",
+   "tags": [
+    "Informative",
+    "Killing",
+    "Multi-power"
+   ],
+   "description": "Each night, investigate a player; if they are scum, you may shoot them.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "shrink",
+   "name": "Shrink",
+   "tags": [
+    "Role-changing",
+    "Support"
+   ],
+   "description": "Each night, treat a player: you cure them of insanity or convert them back.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "silencer",
+   "name": "Silencer",
+   "tags": [
+    "Manipulative"
+   ],
+   "description": "Each night, silence one player; they may not post during the next day.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "mafia",
+   "source": "mu"
+  },
+  {
+   "key": "silversmith",
+   "name": "Silversmith",
+   "tags": [
+    "Role-changing",
+    "Killing",
+    "Passive"
+   ],
+   "description": "Each night, give a player silver: they become deadly to werewolves.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "siren",
+   "name": "Siren",
+   "tags": [
+    "Third Party",
+    "Mission",
+    "Killing"
+   ],
+   "description": "Third party. Each night, lure a player to you; if they visit you, they die.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "slave",
+   "name": "Slave",
+   "tags": [
+    "Misleading",
+    "Linked",
+    "Passive"
+   ],
+   "description": "You serve a Slave Master and win with them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "slave_master",
+   "name": "Slave Master",
+   "tags": [
+    "Misleading",
+    "Linked"
+   ],
+   "description": "You command a Slave and win with them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "sleepwalker",
+   "name": "Sleepwalker",
+   "tags": [
+    "Misleading"
+   ],
+   "description": "You visit a random player each night without knowing it.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "sleuth",
+   "name": "Sleuth",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, investigate a dead player and learn their role and killer.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "snoop",
+   "name": "Snoop",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, check a player's items.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "sorcerer",
+   "name": "Sorcerer",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, learn a player's role. You work for the Mafia or a third party.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "soul_linker",
+   "name": "Soul Linker",
+   "tags": [
+    "Killing",
+    "Multi-targeting"
+   ],
+   "description": "Link two players: if one dies, so does the other.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "soul_stealer",
+   "name": "Soul Stealer",
+   "tags": [
+    "Manipulative"
+   ],
+   "description": "Each night, steal a player's soul: they lose their ability permanently.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "spartacus",
+   "name": "Spartacus",
+   "tags": [
+    "Other"
+   ],
+   "description": "Others may claim to be you; if anyone claims your role, everyone who did dies.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "sponge",
+   "name": "Sponge",
+   "tags": [
+    "Redirection",
+    "Support",
+    "Passive"
+   ],
+   "description": "Each night, choose a player. You absorb all actions aimed at them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "squasher",
+   "name": "Squasher",
+   "tags": [
+    "Killing"
+   ],
+   "description": "Each night, squash a player's ability: their action fails.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "stalker",
+   "name": "Stalker",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, follow a player and learn where they went.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "steadfast_townie",
+   "name": "Steadfast Townie",
+   "tags": [
+    "Passive"
+   ],
+   "description": "You cannot be converted, blocked or redirected.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "strongman",
+   "name": "Strongman",
+   "tags": [
+    "Killing"
+   ],
+   "description": "Your kill cannot be stopped by protection.",
+   "confidence": "standard",
+   "ability": "strongkill",
+   "traits": [
+    "strongman"
+   ],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "subscriber",
+   "name": "Subscriber",
+   "tags": [
+    "Other"
+   ],
+   "description": "You receive regular updates from the host about the game.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "suicide_bomber",
+   "name": "Suicide Bomber",
+   "tags": [
+    "Killing"
+   ],
+   "description": "Once, kill a target and yourself.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "super_backup",
+   "name": "Super Backup",
+   "tags": [
+    "Multi-power",
+    "Power-gaining"
+   ],
+   "description": "When any power role dies, you may inherit it.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "super_commandant",
+   "name": "Super Commandant",
+   "tags": [
+    "Informative",
+    "Protective"
+   ],
+   "description": "You can investigate and protect, depending on the night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "super_godfather",
+   "name": "Super Godfather",
+   "tags": [
+    "Passive"
+   ],
+   "description": "A Godfather variant; immune to investigation and with an extra immunity.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "mafia",
+   "source": "mu"
+  },
+  {
+   "key": "super_saint",
+   "name": "Super Saint",
+   "tags": [
+    "Killing",
+    "Passive"
+   ],
+   "description": "If you are lynched, the player whose vote lynched you dies.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "surgeon",
+   "name": "Surgeon",
+   "tags": [
+    "Protective"
+   ],
+   "description": "Each night, protect a player and change their role reveal if they die.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "survivalist",
+   "name": "Survivalist",
+   "tags": [
+    "Killing",
+    "Protective"
+   ],
+   "description": "You can protect yourself or kill an attacker.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "survivor",
+   "name": "Survivor",
+   "tags": [
+    "Mission",
+    "Third Party"
+   ],
+   "description": "Third party. You win if you are alive at the end of the game.",
+   "confidence": "standard",
+   "ability": "none",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "switch",
+   "name": "Switch",
+   "tags": [
+    "Support",
+    "Manipulative"
+   ],
+   "description": "Each night, switch two players' roles or actions.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "tactician",
+   "name": "Tactician",
+   "tags": [
+    "Support"
+   ],
+   "description": "Each night, plan your team's actions: they get a bonus.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "tailor",
+   "name": "Tailor",
+   "tags": [
+    "Misleading"
+   ],
+   "description": "Each night, change what role a player is revealed as if they die.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "taxi_driver",
+   "name": "Taxi Driver",
+   "tags": [
+    "Redirection",
+    "Multi-targeting"
+   ],
+   "description": "Each night, swap two players: all actions on one go to the other.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "tentacled_townie",
+   "name": "Tentacled Townie",
+   "tags": [
+    "Passive",
+    "Misleading"
+   ],
+   "description": "You are Town but appear as an alien or monster to investigations.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "therapist",
+   "name": "Therapist",
+   "tags": [
+    "Manipulative"
+   ],
+   "description": "Each night, treat a player: you learn their role and cure them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "thug",
+   "name": "Thug",
+   "tags": [
+    "Voting"
+   ],
+   "description": "Your vote can't be changed once cast.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "time_bandit",
+   "name": "Time Bandit",
+   "tags": [
+    "Manipulative",
+    "Support"
+   ],
+   "description": "Each night, steal time from a player: their action happens a night later.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "time_freezer",
+   "name": "Time Freezer",
+   "tags": [
+    "Manipulative"
+   ],
+   "description": "Once per game, freeze time: no actions resolve that night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "time_killer",
+   "name": "Time Killer",
+   "tags": [
+    "Killing",
+    "Support"
+   ],
+   "description": "Kill a player at a set time (they die later).",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "time_mage",
+   "name": "Time Mage",
+   "tags": [
+    "Manipulative"
+   ],
+   "description": "Each night, change when a player's action resolves.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "time_protector",
+   "name": "Time Protector",
+   "tags": [
+    "Protective",
+    "Manipulative"
+   ],
+   "description": "Each night, protect a player for the next night as well.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "time_traveller",
+   "name": "Time Traveller",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, learn what happened on a past night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "tinkerer",
+   "name": "Tinkerer",
+   "tags": [
+    "Killing"
+   ],
+   "description": "Each night, build a trap or gadget that can kill.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "tooth_fairy",
+   "name": "Tooth Fairy",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, visit a player: you learn a fact about them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "torturer",
+   "name": "Torturer",
+   "tags": [
+    "Protective",
+    "Manipulative",
+    "Killing",
+    "Communicative"
+   ],
+   "description": "Each night, torture a player: they are blocked and you learn their role.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "town_drunk",
+   "name": "Town Drunk",
+   "tags": [
+    "Posting"
+   ],
+   "description": "You must post in a certain way (e.g. slurred) to keep your power.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "toxic_goo",
+   "name": "Toxic Goo",
+   "tags": [
+    "Passive",
+    "Killing"
+   ],
+   "description": "Anyone who targets you dies.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "tracker",
+   "name": "Tracker",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, follow one player and learn who they visited.",
+   "confidence": "standard",
+   "ability": "track",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "traffic_controller",
+   "name": "Traffic Controller",
+   "tags": [
+    "Redirection",
+    "Multi-targeting"
+   ],
+   "description": "Each night, redirect actions between players.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "traitor",
+   "name": "Traitor",
+   "tags": [
+    "Mission"
+   ],
+   "description": "A Town-appearing player who wins with the Mafia but doesn't know who they are.",
+   "confidence": "typical",
+   "ability": "none",
+   "traits": [],
+   "alignment_hint": "mafia",
+   "source": "mu"
+  },
+  {
+   "key": "traitor_finder",
+   "name": "Traitor Finder",
+   "tags": [
+    "Support"
+   ],
+   "description": "Each night, learn whether a player is a Traitor.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "trapper",
+   "name": "Trapper",
+   "tags": [
+    "Killing"
+   ],
+   "description": "Each night, set a trap at a player's house; the first visitor dies.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "tree_stump",
+   "name": "Tree Stump",
+   "tags": [
+    "Passive",
+    "Voting"
+   ],
+   "description": "You are a tree stump: you cannot vote or act, but you can still post.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "triplevoter",
+   "name": "Triplevoter",
+   "tags": [
+    "Voting"
+   ],
+   "description": "Your vote counts three times.",
+   "confidence": "standard",
+   "ability": "none",
+   "traits": [
+    "vote_weight_3"
+   ],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "turncoat",
+   "name": "Turncoat",
+   "tags": [
+    "Role-changing"
+   ],
+   "description": "At some point, you may change sides.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "undercover_cop",
+   "name": "Undercover Cop",
+   "tags": [
+    "Protective",
+    "Informative"
+   ],
+   "description": "You are Town, placed in the Mafia: you appear as Mafia to them and learn their plans.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "underdog",
+   "name": "Underdog",
+   "tags": [
+    "Third Party",
+    "Mission",
+    "Role-changing"
+   ],
+   "description": "Third party. You gain power as your side loses players.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "universal_backup",
+   "name": "Universal Backup",
+   "tags": [
+    "Support",
+    "Role-changing",
+    "Power-gaining"
+   ],
+   "description": "When a power role dies, you may inherit it.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "universal_miller",
+   "name": "Universal Miller",
+   "tags": [
+    "Passive",
+    "Misleading"
+   ],
+   "description": "You appear guilty to every kind of investigation.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "unlyncher",
+   "name": "Unlyncher",
+   "tags": [
+    "Mission",
+    "Third Party"
+   ],
+   "description": "Third party. Once per game, cancel a lynch; you win if you survive.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "usurper",
+   "name": "Usurper",
+   "tags": [
+    "Mission"
+   ],
+   "description": "You win if you take the place of your faction's leader.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "vampire_lord",
+   "name": "Vampire Lord",
+   "tags": [
+    "Role-changing",
+    "Third Party"
+   ],
+   "description": "Third party. Each night, bite a player to turn them into a vampire.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "vanilla_cop",
+   "name": "Vanilla Cop",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, learn whether a player is a vanilla (no-ability) role.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "vanilla_townie",
+   "name": "Vanilla Townie",
+   "tags": [
+    "Other"
+   ],
+   "description": "No special ability. Find and lynch the threats to the Town.",
+   "confidence": "standard",
+   "ability": "none",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "vanillaizer",
+   "name": "Vanillaizer",
+   "tags": [
+    "Manipulative",
+    "Role-changing"
+   ],
+   "description": "Each night, make a player vanilla: they lose their ability.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "vengeful_sibling",
+   "name": "Vengeful Sibling",
+   "tags": [
+    "Mission",
+    "Third Party",
+    "Communicative",
+    "Linked"
+   ],
+   "description": "If your sibling dies, you seek revenge on their killer.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "ventriloquist",
+   "name": "Ventriloquist",
+   "tags": [
+    "Manipulative"
+   ],
+   "description": "Each night, make a player post or vote as you choose the next day.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "victim",
+   "name": "Victim",
+   "tags": [
+    "Redirection",
+    "Support",
+    "Protective"
+   ],
+   "description": "Kills aimed at a chosen player go to you instead.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "vigilante",
+   "name": "Vigilante",
+   "tags": [
+    "Killing"
+   ],
+   "description": "Each night, you may kill one player.",
+   "confidence": "standard",
+   "ability": "kill",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "vip",
+   "name": "VIP",
+   "tags": [
+    "Protective",
+    "Killing"
+   ],
+   "description": "If you are killed, your killer dies too.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "virgin",
+   "name": "Virgin",
+   "tags": [
+    "Passive",
+    "Mass Effect"
+   ],
+   "description": "If you are lynched, the Mafia cannot kill the following night.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "virus",
+   "name": "Virus",
+   "tags": [
+    "Third Party",
+    "Killing"
+   ],
+   "description": "Third party. Each night, infect a player; infected players die over time.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "voodoo_lady",
+   "name": "Voodoo Lady",
+   "tags": [
+    "Mission",
+    "Killing"
+   ],
+   "description": "Choose a player and a word; if they say the word, they die.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "voodooist",
+   "name": "Voodooist",
+   "tags": [
+    "Role-changing",
+    "Mission",
+    "Third Party"
+   ],
+   "description": "Third party. Curse players; you win if they die.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "vote_cop",
+   "name": "Vote Cop",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, learn who a player voted for.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "vote_manipulator",
+   "name": "Vote Manipulator",
+   "tags": [
+    "Voting"
+   ],
+   "description": "Each night, change a player's vote the next day.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "votebuyer",
+   "name": "Votebuyer",
+   "tags": [
+    "Voting"
+   ],
+   "description": "Each night, buy a player's vote for the next day.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "voyeur",
+   "name": "Voyeur",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, watch a player and learn what kinds of actions were used on them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "voyeur_guesser",
+   "name": "Voyeur Guesser",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, guess what actions were used on a player.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "warlock",
+   "name": "Warlock",
+   "tags": [
+    "Mission",
+    "Third Party"
+   ],
+   "description": "Third party. Curse a player; you win if your curse is fulfilled.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "watcher",
+   "name": "Watcher",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, watch one player and learn who visited them.",
+   "confidence": "standard",
+   "ability": "watch",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "watchlisted_townie",
+   "name": "Watchlisted Townie",
+   "tags": [
+    "Passive",
+    "Misleading"
+   ],
+   "description": "You are Town but appear suspicious to investigations.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "weak_doctor",
+   "name": "Weak Doctor",
+   "tags": [
+    "Protective"
+   ],
+   "description": "Protects one player from night kills, but there is a chance the save fails.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "werewolf",
+   "name": "Werewolf",
+   "tags": [
+    "Other"
+   ],
+   "description": "Member of the Werewolf faction; kills at night with the pack.",
+   "confidence": "typical",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "white_mage",
+   "name": "White Mage",
+   "tags": [
+    "Protective"
+   ],
+   "description": "Each night, heal a player of an effect or protect them.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "wildcard",
+   "name": "Wildcard",
+   "tags": [
+    "Multi-power",
+    "Informative"
+   ],
+   "description": "Each night, you get a random ability.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "wish_granter",
+   "name": "Wish Granter",
+   "tags": [
+    "Support"
+   ],
+   "description": "Once per game, grant a player a wish (an ability or item).",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "witch",
+   "name": "Witch",
+   "tags": [
+    "Manipulative",
+    "Redirection",
+    "Third Party"
+   ],
+   "description": "Each night, control a player: you choose their target.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  },
+  {
+   "key": "witness",
+   "name": "Witness",
+   "tags": [
+    "Informative"
+   ],
+   "description": "Each night, see who visited a player and what they did.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "wizard",
+   "name": "Wizard",
+   "tags": [
+    "Multi-power"
+   ],
+   "description": "You have several magical abilities and choose one each night.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "yakuza",
+   "name": "Yakuza",
+   "tags": [
+    "Role-changing"
+   ],
+   "description": "Once per game, sacrifice yourself to convert a player to the Mafia.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "mafia",
+   "source": "mu"
+  },
+  {
+   "key": "yellow_goo",
+   "name": "Yellow Goo",
+   "tags": [
+    "Passive",
+    "Role-changing",
+    "Manipulative"
+   ],
+   "description": "When a player targets you, they become Yellow Goo and lose their ability.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "any",
+   "source": "mu"
+  },
+  {
+   "key": "zombie",
+   "name": "Zombie",
+   "tags": [
+    "Mission",
+    "Third Party"
+   ],
+   "description": "Third party. Each night, infect a player; infected players become zombies.",
+   "confidence": "check",
+   "ability": "manual",
+   "traits": [],
+   "alignment_hint": "third_party",
+   "source": "mu"
+  }
+ ],
+ "modifiers": [
+  {
+   "key": "bulletproof",
+   "name": "Bulletproof",
+   "description": "Survives night kills.",
+   "auto": true
+  },
+  {
+   "key": "ninja",
+   "name": "Ninja",
+   "description": "Visits are invisible to Trackers and Watchers.",
+   "auto": true
+  },
+  {
+   "key": "strongman",
+   "name": "Strongman",
+   "description": "Kills ignore protection.",
+   "auto": true
+  },
+  {
+   "key": "macho",
+   "name": "Macho",
+   "description": "Cannot be protected by Doctors or Bodyguards.",
+   "auto": true
+  },
+  {
+   "key": "detect_immune",
+   "name": "Detection Immune",
+   "description": "Appears innocent to alignment checks.",
+   "auto": true
+  },
+  {
+   "key": "suspicious",
+   "name": "Suspicious",
+   "description": "Appears guilty to alignment checks.",
+   "auto": true
+  },
+  {
+   "key": "roleblock_immune",
+   "name": "Roleblock Immune",
+   "description": "Cannot be roleblocked or jailed into inaction.",
+   "auto": true
+  },
+  {
+   "key": "lynchproof",
+   "name": "Lynchproof",
+   "description": "Survives being lynched.",
+   "auto": true
+  },
+  {
+   "key": "hated",
+   "name": "Hated",
+   "description": "Needs one fewer vote to lynch.",
+   "auto": true
+  },
+  {
+   "key": "loved",
+   "name": "Loved",
+   "description": "Needs one more vote to lynch.",
+   "auto": true
+  },
+  {
+   "key": "one_shot",
+   "name": "1-Shot",
+   "description": "Ability can be used once per game.",
+   "auto": true
+  },
+  {
+   "key": "two_shot",
+   "name": "2-Shot",
+   "description": "Ability can be used twice per game.",
+   "auto": true
+  },
+  {
+   "key": "three_shot",
+   "name": "3-Shot",
+   "description": "Ability can be used three times per game.",
+   "auto": true
+  },
+  {
+   "key": "odd_night",
+   "name": "Odd Night",
+   "description": "May only act on odd-numbered nights.",
+   "auto": true
+  },
+  {
+   "key": "even_night",
+   "name": "Even Night",
+   "description": "May only act on even-numbered nights.",
+   "auto": true
+  },
+  {
+   "key": "non_consecutive",
+   "name": "Non-consecutive",
+   "description": "Cannot target the same player two nights in a row.",
+   "auto": true
+  },
+  {
+   "key": "self_target",
+   "name": "Self-targetable",
+   "description": "May target themself.",
+   "auto": true
+  },
+  {
+   "key": "loyal",
+   "name": "Loyal",
+   "description": "Cannot target members of their own faction.",
+   "auto": true
+  },
+  {
+   "key": "day_action",
+   "name": "Day Action",
+   "description": "Uses the ability during the day (host resolves).",
+   "auto": false
+  },
+  {
+   "key": "compulsive",
+   "name": "Compulsive",
+   "description": "Must use the ability every night.",
+   "auto": false
+  }
+ ]
+}
