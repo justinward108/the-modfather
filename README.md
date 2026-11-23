@@ -7,7 +7,8 @@ A Discord GM assistant for themed, forum-style Mafia games, plus a web dashboard
 - **Flexible player counts.** Any slot can be "only with N+ players", so one theme covers several player counts. The dashboard shows which counts a theme supports.
 - **Deadlines.** Each day has a fixed end date and time. When it passes, the most-voted player is lynched, the channel locks and the night starts. Night actions are due by a deadline. After it, `/action` closes and the host turns the night around whenever they're ready. Reminders go out before each deadline.
 - **Claims.** Players claim a character, a role, or both. The bot fills in what a claim implies from the theme (claiming "Dr. Melfi" shows "→ Doctor"). It flags counterclaims, claims of dead characters and pairs that don't exist, and keeps a claim history.
-- **Votes.** Majority lynch, with vote weights, Hated/Loved thresholds, No Lynch, and `VOTE: name` text votes. **When a lynch is reached the game channel locks immediately.**
+- **Votes.** Majority lynch, with vote weights, Hated/Loved thresholds, No Lynch, and `VOTE: name` text votes. **When a lynch is reached the game channel locks immediately.** The final count of every day is saved, so you can look up any earlier day's votes, plus the order votes came in.
+- **Vote stats.** Each player's votes on Mafia vs not Mafia. Mid-game, players only see votes on flipped players, so nothing hidden leaks; the host sees everything privately; after the game, everyone sees everything.
 - **Nights.** Host-assisted. Players send actions privately. The bot resolves the common abilities itself and lists the rest for the host. Nothing is applied until the host presses Apply.
 - **When things go wrong.** There's a substitute list. `/host replace` hands a slot to a new player along with its votes, claim, night action and role. You also get `/quit`, automatic replacement requests when a player leaves the server, modkills, revives and host transfer. If a player's DMs are closed, their results go to the host channel, and `/role` always works. Games are saved in SQLite and resume after a restart.
 
@@ -20,7 +21,9 @@ A Discord GM assistant for themed, forum-style Mafia games, plus a web dashboard
 | Command | What it does |
 |---|---|
 | `/role` | See your role PM (only you can see it) |
-| `/vote target` · `/unvote` · `/votecount` | Voting. You can also type `VOTE: name` / `UNVOTE` in the game channel |
+| `/vote target` · `/unvote` | Voting. You can also type `VOTE: name` / `UNVOTE` in the game channel |
+| `/votecount [day] [history]` | Today's live count, or the final count and outcome of any earlier day. `history` lists every vote and unvote in order, with times |
+| `/votestats [scope]` | Each player's votes on Mafia vs not Mafia, as a table with a % on Mafia. Final vote of each day by default, or every vote cast |
 | `/claim character role note` | Claim a character, a role, or both (all optional, with autocomplete) |
 | `/unclaim` · `/claims [history]` | Withdraw a claim · show the claims board, counterclaims and history |
 | `/action target [target2] [note]` · `/unaction` | Send or cancel your night action (private), until actions close |
@@ -59,6 +62,16 @@ A Discord GM assistant for themed, forum-style Mafia games, plus a web dashboard
 5. At the action deadline `/action` closes. The host gets the preview with an **Apply** button, rules on anything marked for them, and applies whenever they're ready. Then the next day starts.
 
 The bot checks deadlines every 20 seconds. If it's offline when a deadline passes, it handles that deadline as soon as it's back.
+
+### Vote stats
+
+`/votestats` shows, for each player: votes on **Mafia**, votes on **not Mafia** (Town and third parties), **No Lynch** votes, **?** votes, and **% on Mafia** = Mafia ÷ (Mafia + not Mafia).
+
+- **Scope.** By default each player's final vote of each finished day counts once. "Every vote cast" counts each vote, including ones that were changed.
+- **What players see mid-game.** A vote only counts as Mafia or not Mafia once its target has died and flipped. Votes on anyone still hidden show as **?**. If the theme reveals only the character on death, every vote stays **?** until the game ends.
+- **The host** (and admins who aren't playing) see every faction, in a private reply. They can pass `private:False` to post the public version.
+- **After the game ends**, everyone sees the full breakdown.
+- Stats follow the character's slot, so a replacement inherits the slot's votes, and the table notes who held the slot before.
 
 ### What the bot resolves by itself
 
@@ -139,7 +152,7 @@ python3 -m venv .venv && . .venv/bin/activate
 pip install -r requirements-dev.txt
 cp .env.example .env               # PUBLIC_URL=http://localhost:8080, redirect http://localhost:8080/callback
 python -m modfather
-pytest                             # 68 tests
+pytest                             # 73 tests
 ```
 
 The role catalog is generated from `tools/`: `python tools/make_catalog.py tools/mu_roles.txt modfather/data/roles.json`. To improve a role's starter text, edit `tools/role_texts_*.py` and rerun that command.

@@ -378,3 +378,82 @@ def test_role_card_uses_custom_pm():
     assert "At night" in names and "Ability" not in names and "Win condition" not in names
     plain = render.role_card(g, g.player(3))            # no custom PM -> starter card
     assert [f[0] for f in plain["fields"]][:3] == ["Role", "Faction", "Ability"]
+
+
+# ---------------------------------------------------------------- vote records & stats
+def test_day_records_and_votecount_for_past_days():
+    g = started()
+    g.vote(1, 6); g.vote(1, 5)                 # P1 changes vote
+    g.vote(2, 5)
+    g.vote(3, 6)
+    g.lynch(5, "deadline")                     # host/deadline lynch of Frank (vigilante)
+    rec = g.day_record(1)
+    assert rec["outcome"]["lynched_name"] == "P5" and rec["outcome"]["how"] == "deadline"
+    assert {r["target_name"]: r["count"] for r in rec["rows"]} == {"P5": 2, "P6": 1}
+    g.start_night(); g.start_day()
+    g.vote(1, 2)
+    live = render.votecount(g)                 # today, live
+    assert "Vote count — Day 2" in live and "P2 (Paulie)" in live
+    past = render.votecount(g, 1)
+    assert "Final vote count — Day 1" in past and "P5 (Frank)" in past and "deadline passed" in past
+    assert "P1, P2" in past
+    hist = render.vote_history(g, 1)
+    assert hist.count("→") == 4 and "P1 → **P6**" in hist and "P1 → **P5**" in hist
+    assert "There's no vote record for Day 7" in render.votecount(g, 7)
+
+
+def test_vote_stats_hide_unrevealed_factions():
+    g = started()
+    # Day 1: P3, P4 vote Tony (mafia, uid 1); P1 votes Bob (town, uid 6); P2 votes No Lynch
+    g.vote(3, 1); g.vote(4, 1); g.vote(1, 6); g.vote(2, NO_LYNCH)
+    g.lynch(None, "host")
+    g.start_night(); g.start_day()
+    # Day 2: P3 votes Tony then switches to Bob; P4 stays on Tony; Bob is lynched by majority
+    g.vote(3, 1); g.vote(3, 6); g.vote(4, 1); g.vote(5, 6); g.vote(7, 6)
+    assert g.vote(1, 6) == 6
+    g.lynch(6, "majority")                      # Bob flips Town; Tony is still hidden
+
+    def by(rows):
+        return {g.slot_holder(r["slot"]).user_id: r for r in rows}
+
+    pub = by(g.vote_stats("final"))
+    assert (pub[3]["mafia"], pub[3]["not_mafia"], pub[3]["unknown"]) == (0, 1, 1)
+    assert (pub[4]["mafia"], pub[4]["unknown"]) == (0, 2) and pub[4]["mafia_pct"] is None
+    assert (pub[1]["not_mafia"], pub[1]["mafia_pct"]) == (2, 0)
+    assert pub[2]["no_lynch"] == 1
+
+    host = by(g.vote_stats("final", everything=True))
+    assert (host[3]["mafia"], host[3]["not_mafia"], host[3]["mafia_pct"]) == (1, 1, 50)
+    assert (host[4]["mafia"], host[4]["mafia_pct"]) == (2, 100)
+
+    every = by(g.vote_stats("all", everything=True))
+    assert (every[3]["mafia"], every[3]["not_mafia"]) == (2, 1)    # counts the switch too
+
+    text = render.vote_stats(g, "final")
+    assert "Only targets who have flipped count" in text and "P4 (Silvio)".split()[0] in text
+    host_text = render.vote_stats(g, "final", everything=True)
+    assert "Host view" in host_text and "100%" in host_text
+
+    g.end(["Town"])                             # after the game, everyone sees everything
+    after = by(g.vote_stats("final"))
+    assert after[4]["mafia_pct"] == 100
+    assert "Only targets" not in render.vote_stats(g, "final")
+
+
+def test_vote_stats_follow_slot_through_replacement():
+    g = started()
+    g.vote(3, 1); g.vote(4, 1); g.vote(5, 1); g.vote(6, 1)
+    g.lynch(1, "majority")                      # Tony (mafia) lynched
+    g.start_night(); g.start_day()
+    g.replace(5, 77, "NewFrank")
+    st = {r["slot"]: r for r in g.vote_stats("final")}
+    frank_slot = g.player(77).slot
+    assert st[frank_slot]["mafia"] == 1 and st[frank_slot]["mafia_pct"] == 100
+    assert "NewFrank replaced <@5>" in render.vote_stats(g)
+
+
+def test_game_end_mid_day_records_the_day():
+    g = started()
+    g.vote(1, 6)
+    g.end(["Cancelled"])
+    assert g.day_record(1)["outcome"]["how"] == "game ended"

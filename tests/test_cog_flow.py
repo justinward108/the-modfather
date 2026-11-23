@@ -562,3 +562,33 @@ async def test_deadline_survives_restart_and_old_saves(world):
     cog2.games = {old.id: old}
     await cog2.tick()
     assert old.deadline is None and old.phase == DAY
+
+
+async def test_vote_lookup_and_stats_commands(world):
+    w, cog = world, world.cog
+    g = await started_game(w, {"day_hours": 0})
+    M = lambda p: w.guild.members[p.user_id]  # noqa: E731
+    tony, artie, melfi = by_char(g, "Tony"), by_char(g, "Artie"), by_char(g, "Melfi")
+    harris, carm = by_char(g, "Harris"), by_char(g, "Carmela")
+    for p in (artie, melfi, harris):
+        await run(cog.vote_cmd, cog, I(w, M(p)), target=str(tony.user_id))
+    await run(cog.vote_cmd, cog, I(w, M(carm)), target=str(artie.user_id))
+    await run(cog.vote_cmd, cog, I(w, M(carm)), target=str(tony.user_id))     # majority -> Tony lynched
+    assert not tony.alive and g.phase == NIGHT
+    # at night, /votecount shows the finished day; day=1 + history lists every vote in order
+    vc = await run(cog.votecount_cmd, cog, I(w, M(artie)))
+    assert "Final vote count — Day 1" in vc.said() and "majority reached" in vc.said()
+    h = await run(cog.votecount_cmd, cog, I(w, M(artie)), day=1, history=True)
+    assert "Vote history — Day 1" in h.said() and h.said().count("→") == 5
+    bad = await run(cog.votecount_cmd, cog, I(w, M(artie)), day=9)
+    assert "Pick a day from 1 to 1" in bad.said()
+    # player view: Tony has flipped Mafia, so those votes count publicly
+    pv = await run(cog.votestats_cmd, cog, I(w, M(artie)))
+    assert pv.out[0][1] is False and "Only targets who have flipped" in pv.said()
+    assert "100%" in pv.said()
+    # host view is private
+    hv = await run(cog.votestats_cmd, cog, I(w, w.host))
+    assert hv.out[0][1] is True and "Host view" in hv.said()
+    # host can choose the public view
+    hp = await run(cog.votestats_cmd, cog, I(w, w.host), private=False)
+    assert hp.out[0][1] is False and "Host view" not in hp.said()

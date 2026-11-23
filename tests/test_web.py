@@ -85,7 +85,8 @@ async def test_theme_crud_and_permissions(client):
 async def test_tampered_cookie_rejected(client):
     c, _ = client
     tok = web.sign({"kind": "user", "id": "1", "name": "U", "avatar": None, "exp": 9e12})
-    c.session.cookie_jar.update_cookies({web.COOKIE: tok[:-2] + "00"})
+    bad = tok[:-1] + ("0" if tok[-1] != "0" else "1")      # always change the signature
+    c.session.cookie_jar.update_cookies({web.COOKIE: bad})
     assert (await c.get("/api/me")).status == 401
 
 

@@ -49,7 +49,8 @@ class Game:
     sub_names: dict = field(default_factory=dict)
     players: dict = field(default_factory=dict)          # str(user_id) -> Player
     votes: dict = field(default_factory=dict)            # str(voter) -> target id
-    vote_log: list = field(default_factory=list)
+    vote_log: list = field(default_factory=list)        # every vote / unvote, with slots and names
+    day_records: list = field(default_factory=list)      # final vote count + outcome of each finished day
     claims: dict = field(default_factory=dict)           # str(user_id) -> claim dict
     claim_log: list = field(default_factory=list)        # every claim/unclaim, in order
     actions: dict = field(default_factory=dict)          # str(user_id) -> action dict
@@ -326,7 +327,7 @@ class Game:
         else:
             self.require_player(target)
         self.votes[str(voter)] = target
-        self.vote_log.append({"day": self.day, "voter": voter, "target": target, "t": time.time()})
+        self._log_vote(p, target)
         if self.votes_on(target) >= self.threshold(target):
             return target
         return None
@@ -336,7 +337,40 @@ class Game:
         if str(voter) not in self.votes:
             raise GameError("You aren't voting for anyone.")
         del self.votes[str(voter)]
-        self.vote_log.append({"day": self.day, "voter": voter, "target": None, "t": time.time()})
+        self._log_vote(self.player(voter), None)
+
+    def _log_vote(self, p: Player, target: int | None) -> None:
+        tp = self.player(target) if target else None
+        self.vote_log.append({
+            "day": self.day, "voter": p.user_id, "voter_slot": p.slot, "voter_name": p.name,
+            "target": target, "target_slot": tp.slot if tp else None,
+            "target_name": tp.name if tp else ("No Lynch" if target == NO_LYNCH else None),
+            "t": time.time()})
+
+    def vote_snapshot(self) -> dict:
+        """The vote count right now, with slots and names frozen for the record."""
+        rows = []
+        for target, voters in self.tally().items():
+            tp = self.player(target) if target else None
+            rows.append({
+                "target": target, "target_slot": tp.slot if tp else None,
+                "target_name": tp.name if tp else "No Lynch",
+                "count": self.votes_on(target), "threshold": self.threshold(target),
+                "voters": [{"uid": v, "slot": self.players[str(v)].slot, "name": self.players[str(v)].name,
+                            "weight": self.weight(self.players[str(v)])} for v in voters]})
+        rows.sort(key=lambda r: -r["count"])
+        return {"day": self.day, "alive": len(self.living()), "majority": self.majority(), "rows": rows,
+                "not_voting": [{"uid": p.user_id, "slot": p.slot, "name": p.name} for p in self.living()
+                               if str(p.user_id) not in self.votes and self.weight(p) > 0],
+                "t": time.time()}
+
+    def record_day(self, outcome: dict) -> dict:
+        rec = {**self.vote_snapshot(), "outcome": outcome}
+        self.day_records = [r for r in self.day_records if r["day"] != self.day] + [rec]
+        return rec
+
+    def day_record(self, day: int) -> dict | None:
+        return next((r for r in self.day_records if r["day"] == day), None)
 
     def plurality(self, rng: random.Random | None = None) -> int | None:
         """Day-end resolution: most-voted target, tie per theme setting. None = no lynch."""
@@ -352,10 +386,17 @@ class Game:
             return None
         return leaders[0] or None
 
-    def lynch(self, target: int | None) -> dict:
-        """Apply a lynch (or no lynch) and lock the day. Returns an outcome dict."""
+    def lynch(self, target: int | None, how: str = "") -> dict:
+        """Apply a lynch (or no lynch) and lock the day. Returns an outcome dict.
+
+        how: "majority", "deadline", "host" — recorded with the day's final vote count.
+        """
         if self.phase != DAY:
             raise GameError("There is no day in progress.")
+        tp = self.player(target) if target else None
+        self.record_day({"lynched": target or None, "lynched_slot": tp.slot if tp else None,
+                         "lynched_name": tp.name if tp else None, "how": how,
+                         "survived": bool(tp and "lynchproof" in self.role(tp)["traits"])})
         self.locked = True
         self.phase = DUSK
         self.deadline = None
@@ -424,6 +465,60 @@ class Game:
         self.deadline = None
         self.actions_closed = False
         self.reminders_sent = []
+
+    # ------------------------------------------------------------ vote stats
+    def slot_holder(self, slot: int) -> Player | None:
+        return next((p for p in self.players.values() if p.slot == slot), None)
+
+    def faction_known(self, slot: int, everything: bool) -> bool:
+        """Can this slot's faction be shown? Always to the host / after the game;
+        otherwise only once the player has died and flipped with their faction."""
+        if everything or self.phase == ENDED:
+            return True
+        p = self.slot_holder(slot)
+        return bool(p and not p.alive and self.theme["settings"]["reveal_on_death"] in ("role", "alignment"))
+
+    def vote_stats(self, scope: str = "final", everything: bool = False) -> list[dict]:
+        """Per player slot: how many of their votes landed on Mafia vs not Mafia.
+
+        scope "final": the vote each player had when each finished day ended.
+        scope "all": every vote cast (changes count separately; unvotes don't count).
+        everything=False hides factions that aren't public yet (counted as unknown).
+        "Mafia" means a faction of kind mafia; town and third parties are "not mafia".
+        """
+        votes: list[tuple[int, int | None, int]] = []      # (voter_slot, target_slot or None=no lynch, day)
+        if scope == "all":
+            for v in self.vote_log:
+                if v.get("target") is None or v.get("voter_slot") is None:
+                    continue
+                votes.append((v["voter_slot"], v.get("target_slot"), v["day"]))
+        else:
+            for rec in self.day_records:
+                for row in rec["rows"]:
+                    for voter in row["voters"]:
+                        votes.append((voter["slot"], row["target_slot"], rec["day"]))
+        stats: dict[int, dict] = {}
+        for p in self.players.values():
+            stats[p.slot] = {"slot": p.slot, "mafia": 0, "not_mafia": 0, "no_lynch": 0, "unknown": 0}
+        for voter_slot, target_slot, _day in votes:
+            st = stats.setdefault(voter_slot, {"slot": voter_slot, "mafia": 0, "not_mafia": 0,
+                                               "no_lynch": 0, "unknown": 0})
+            if target_slot is None:
+                st["no_lynch"] += 1
+            elif not self.faction_known(target_slot, everything):
+                st["unknown"] += 1
+            elif themes.faction(self.theme, self.theme["slots"][target_slot]["faction"])["kind"] == "mafia":
+                st["mafia"] += 1
+            else:
+                st["not_mafia"] += 1
+        out = []
+        for st in stats.values():
+            judged = st["mafia"] + st["not_mafia"]
+            st["total"] = judged + st["no_lynch"] + st["unknown"]
+            st["mafia_pct"] = round(100 * st["mafia"] / judged) if judged else None
+            out.append(st)
+        out.sort(key=lambda s: (-(s["mafia_pct"] if s["mafia_pct"] is not None else -1), -s["total"]))
+        return out
 
     # ------------------------------------------------------------ claims
     def slots_in_play(self) -> list[dict]:
@@ -856,6 +951,9 @@ class Game:
         return None
 
     def end(self, winners: list[str]) -> None:
+        if self.phase == DAY and not self.day_record(self.day):
+            self.record_day({"lynched": None, "lynched_slot": None, "lynched_name": None,
+                             "how": "game ended", "survived": False})
         self.phase = ENDED
         self.locked = True
         self.winners = winners

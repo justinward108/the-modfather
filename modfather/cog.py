@@ -339,8 +339,8 @@ class GameCog(commands.Cog):
         await self.tell_host(g, "Game finished. Run `/game cleanup` to delete this game's "
                                 "channels and roles when you're done with them.")
 
-    async def do_lynch(self, g: Game, target: int | None, reason: str):
-        out = g.lynch(target)
+    async def do_lynch(self, g: Game, target: int | None, reason: str, how: str = "host"):
+        out = g.lynch(target, how)
         await self.set_speaking(g, False)
         if out["lynched"] is None:
             await self.post(g, f"🔒 {reason}\n**No one was lynched.** The day is over.")
@@ -365,7 +365,7 @@ class GameCog(commands.Cog):
         who = "No Lynch" if target == NO_LYNCH else g.players[str(target)].name
         if lynched is not None:
             reason = (f"**{p.name}** votes **{who}** — majority reached!")
-            await self.do_lynch(g, None if lynched == NO_LYNCH else lynched, reason)
+            await self.do_lynch(g, None if lynched == NO_LYNCH else lynched, reason, "majority")
             return reason
         return f"**{p.name}** votes **{who}** ({g.votes_on(target)}/{g.threshold(target)})."
 
@@ -762,13 +762,46 @@ class GameCog(commands.Cog):
             await self.save(g)
         await reply(inter, f"**{g.player(inter.user.id).name}** unvotes.")
 
-    @app_commands.command(name="votecount", description="Show the current vote count")
+    @app_commands.command(name="votecount", description="Vote count for today or any earlier day")
     @app_commands.guild_only()
-    async def votecount_cmd(self, inter: discord.Interaction):
+    @app_commands.describe(day="Which day (default: today, or the last finished day at night)",
+                           history="Also list every vote and unvote in order")
+    async def votecount_cmd(self, inter: discord.Interaction, day: int | None = None, history: bool = False):
         g = self.game_for(inter)
-        if g.phase in (SIGNUPS,):
+        if g.phase == SIGNUPS:
             raise GameError("The game hasn't started.")
-        await reply(inter, render.chunks(render.votecount(g))[0])
+        if day is not None and not (1 <= day <= max(g.day, 1)):
+            raise GameError(f"Pick a day from 1 to {max(g.day, 1)}.")
+        text = render.votecount(g, day)
+        if history:
+            shown = day if day is not None else (g.day if g.phase == DAY or not g.day_records
+                                                 else g.day_records[-1]["day"])
+            text += "\n\n" + render.vote_history(g, shown)
+        parts = render.chunks(text)
+        await reply(inter, parts[0])
+        for part in parts[1:]:
+            await inter.followup.send(part)
+
+    @app_commands.command(name="votestats", description="Each player's votes on Mafia vs not Mafia")
+    @app_commands.guild_only()
+    @app_commands.describe(scope="Final vote of each day (default) or every vote cast",
+                           private="Host: see hidden factions privately mid-game (default on for the host)")
+    @app_commands.choices(scope=[app_commands.Choice(name="Final vote of each day", value="final"),
+                                 app_commands.Choice(name="Every vote cast", value="all")])
+    async def votestats_cmd(self, inter: discord.Interaction, scope: str = "final", private: bool | None = None):
+        g = self.game_for(inter)
+        if g.phase == SIGNUPS:
+            raise GameError("The game hasn't started.")
+        is_host = inter.user.id == g.host_id or await self.is_admin(inter.user)
+        if g.player(inter.user.id) and g.player(inter.user.id).alive and g.phase != ENDED:
+            is_host = False      # a living player who is also an admin gets the public view
+        everything = is_host and (private is not False) and g.phase != ENDED
+        parts = render.chunks(render.vote_stats(g, scope, everything))
+        for i, part in enumerate(parts):
+            if i == 0:
+                await reply(inter, part, ephemeral=everything)
+            else:
+                await inter.followup.send(part, ephemeral=everything)
 
     @app_commands.command(name="claim", description="Publicly claim a character, a role, or both")
     @app_commands.guild_only()
@@ -1239,7 +1272,8 @@ class GameCog(commands.Cog):
                 if left <= 0:
                     if g.phase == DAY:
                         target = g.plurality()
-                        await self.do_lynch(g, target, f"⏰ **Day {g.day} has ended** — the deadline passed.")
+                        await self.do_lynch(g, target, f"⏰ **Day {g.day} has ended** — the deadline passed.",
+                                            "deadline")
                         changed = True
                     elif g.phase == NIGHT and not g.actions_closed:
                         g.close_actions()

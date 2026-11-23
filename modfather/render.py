@@ -54,29 +54,107 @@ def _out_of_shots(g: Game, p) -> bool:
     return "day_action" in traits
 
 
-def votecount(g: Game) -> str:
-    alive = g.living()
-    lines = [f"**Vote count — {phase_name(g)}**  ({len(alive)} alive, {g.majority()} to lynch)"]
-    tally = g.tally()
-    rows = []
-    for target, voters in tally.items():
-        n = g.votes_on(target)
-        need = g.threshold(target)
-        who = "No Lynch" if target == NO_LYNCH else g.label(g.players[str(target)])
-        names = ", ".join(
-            g.players[str(v)].name + (f" (x{g.weight(g.players[str(v)])})"
-                                      if g.weight(g.players[str(v)]) != 1 else "")
-            for v in voters)
-        rows.append((n, f"**{who}** [{n}/{need}]: {names}"))
-    rows.sort(key=lambda r: -r[0])
-    lines += [r[1] for r in rows] or ["*No votes yet.*"]
-    not_voting = [p.name for p in alive if str(p.user_id) not in g.votes and g.weight(p) > 0]
-    if not_voting:
-        lines.append(f"Not voting: {', '.join(not_voting)}")
-    if g.locked:
-        lines.append("🔒 *The day is locked.*")
-    elif deadline_line(g):
-        lines.append(deadline_line(g))
+def _count_lines(g: Game, snap: dict) -> list[str]:
+    def char(slot):
+        return f" ({g.theme['slots'][slot]['character']})" if slot is not None else ""
+    lines = []
+    for row in snap["rows"]:
+        who = "No Lynch" if row["target_slot"] is None else row["target_name"] + char(row["target_slot"])
+        names = ", ".join(v["name"] + (f" (x{v['weight']})" if v["weight"] != 1 else "") for v in row["voters"])
+        lines.append(f"**{who}** [{row['count']}/{row['threshold']}]: {names}")
+    lines = lines or ["*No votes.*"]
+    if snap["not_voting"]:
+        lines.append("Not voting: " + ", ".join(v["name"] for v in snap["not_voting"]))
+    return lines
+
+
+HOW = {"majority": "majority reached", "deadline": "the deadline passed",
+       "host": "the host called it", "game ended": "the game ended"}
+
+
+def votecount(g: Game, day: int | None = None) -> str:
+    """Live count for the day in progress, or the final count of a finished day."""
+    live = g.phase == DAY and (day is None or day == g.day)
+    if live:
+        snap = g.vote_snapshot()
+        lines = [f"**Vote count — Day {g.day}**  ({snap['alive']} alive, {snap['majority']} to lynch)"]
+        lines += _count_lines(g, snap)
+        if g.locked:
+            lines.append("🔒 *The day is locked.*")
+        elif deadline_line(g):
+            lines.append(deadline_line(g))
+        return "\n".join(lines)
+    if day is None:
+        if not g.day_records:
+            return "No day has finished yet."
+        day = g.day_records[-1]["day"]
+    rec = g.day_record(day)
+    if rec is None:
+        done = ", ".join(str(r["day"]) for r in g.day_records) or "none yet"
+        raise_msg = f"There's no vote record for Day {day}. Finished days: {done}."
+        return raise_msg
+    lines = [f"**Final vote count — Day {day}**  ({rec['alive']} alive, {rec['majority']} to lynch)"]
+    lines += _count_lines(g, rec)
+    o = rec["outcome"]
+    how = HOW.get(o.get("how", ""), "")
+    if o.get("lynched_slot") is not None:
+        who = f"{o['lynched_name']} ({g.theme['slots'][o['lynched_slot']]['character']})"
+        lines.append(f"⚖️ **{who}** was lynched" + (" but survived" if o.get("survived") else "")
+                     + (f" — {how}." if how else "."))
+    else:
+        lines.append("No one was lynched" + (f" — {how}." if how else "."))
+    return "\n".join(lines)
+
+
+def vote_history(g: Game, day: int) -> str:
+    """Every vote and unvote on a day, in order, with Discord timestamps."""
+    entries = [v for v in g.vote_log if v["day"] == day]
+    if not entries:
+        return f"No votes were cast on Day {day}."
+    lines = [f"**Vote history — Day {day}**"]
+    for v in entries:
+        voter = v.get("voter_name") or f"<@{v['voter']}>"
+        when = stamp(v["t"], "t") if v.get("t") else ""
+        if v.get("target") is None:
+            lines.append(f"{when} {voter} unvoted")
+        else:
+            tgt = v.get("target_name") or ("No Lynch" if v["target"] == NO_LYNCH else f"<@{v['target']}>")
+            lines.append(f"{when} {voter} → **{tgt}**")
+    rec = g.day_record(day)
+    if rec and rec["outcome"].get("how") == "majority":
+        lines.append("— majority reached —")
+    return "\n".join(lines)
+
+
+def vote_stats(g: Game, scope: str = "final", everything: bool = False) -> str:
+    """Per-player table of votes on Mafia vs not Mafia."""
+    rows = g.vote_stats(scope, everything)
+    hidden = not everything and g.phase != ENDED
+    title = "final vote of each day" if scope == "final" else "every vote cast"
+    lines = [f"**Votes on Mafia vs not Mafia — {title}**"]
+    if hidden:
+        lines.append("*Only targets who have flipped count; votes on anyone still hidden are “?”.*")
+    elif g.phase != ENDED:
+        lines.append("*Host view — includes hidden factions. Don't share this mid-game.*")
+    if scope == "final" and not g.day_records:
+        lines.append("No day has finished yet.")
+        return "\n".join(lines)
+    name_w = 22
+    table = [f"{'Player':<{name_w}} Mafia  Not  NL   ?   % on Mafia"]
+    for st in rows:
+        p = g.slot_holder(st["slot"])
+        ch = g.theme["slots"][st["slot"]]["character"]
+        nm = (p.name if p else "?") + (" †" if p and not p.alive else "")
+        label = f"{nm} ({ch})"
+        if len(label) > name_w:
+            label = label[:name_w - 1] + "…"
+        pct = f"{st['mafia_pct']}%" if st["mafia_pct"] is not None else "—"
+        table.append(f"{label:<{name_w}} {st['mafia']:>5} {st['not_mafia']:>4} {st['no_lynch']:>3} {st['unknown']:>3}   {pct:>5}")
+    lines.append("```\n" + "\n".join(table) + "\n```")
+    replaced = [g.slot_holder(st["slot"]) for st in rows]
+    notes = [f"{p.name} replaced {', '.join(f'<@{u}>' for u in p.replaced)}" for p in replaced if p and p.replaced]
+    lines.append("% on Mafia = Mafia ÷ (Mafia + Not), so No Lynch and ? votes don't count. Third parties count as not Mafia. † = dead."
+                 + (" Stats follow the character's slot: " + "; ".join(notes) + "." if notes else ""))
     return "\n".join(lines)
 
 
