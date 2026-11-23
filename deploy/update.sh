@@ -6,6 +6,6 @@ cp /opt/modfather/data/modfather.db "/opt/modfather/data/modfather.db.bak-$(date
 rm -rf /opt/modfather/app/modfather
 cp -r "$SRC"/modfather "$SRC"/requirements.txt /opt/modfather/app/
 /opt/modfather/venv/bin/pip install -q -r /opt/modfather/app/requirements.txt
-chown -R modfather:modfather /opt/modfather
+chown -R modbot:modbot /opt/modfather
 systemctl restart modfather
 echo "Updated. Running games resume where they left off."

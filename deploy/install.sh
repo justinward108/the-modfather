@@ -13,13 +13,23 @@ if ! command -v caddy >/dev/null; then
   apt-get update && apt-get install -y caddy
 fi
 
-id modfather >/dev/null 2>&1 || useradd --system --home /opt/modfather --shell /usr/sbin/nologin modfather
+# The bot runs as its own no-login account. Never reuse an account someone logs in with.
+SVC=modbot
+if id "$SVC" >/dev/null 2>&1; then
+  SH="$(getent passwd "$SVC" | cut -d: -f7)"
+  case "$SH" in */nologin|*/false) ;; *)
+    echo "The user '$SVC' already exists and can log in. Refusing to turn it into the bot's service account." >&2
+    exit 1 ;;
+  esac
+else
+  useradd --system --home /opt/modfather --shell /usr/sbin/nologin "$SVC"
+fi
 mkdir -p /opt/modfather/app /opt/modfather/data
 cp -r "$SRC"/modfather "$SRC"/requirements.txt /opt/modfather/app/
 [ -f /opt/modfather/app/.env ] || cp "$SRC"/.env.example /opt/modfather/app/.env
 python3 -m venv /opt/modfather/venv
 /opt/modfather/venv/bin/pip install -q -r /opt/modfather/app/requirements.txt
-chown -R modfather:modfather /opt/modfather
+chown -R "$SVC":"$SVC" /opt/modfather
 chmod 600 /opt/modfather/app/.env
 
 sed "s/mafia.poor.camp/$DOMAIN/" "$SRC"/deploy/Caddyfile > /etc/caddy/Caddyfile

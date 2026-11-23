@@ -5,7 +5,7 @@ Wants=network-online.target
 
 [Service]
 Type=simple
-User=modfather
+User=modbot
 WorkingDirectory=/opt/modfather/app
 Environment=MODFATHER_ENV=/opt/modfather/app/.env
 ExecStart=/opt/modfather/venv/bin/python -m modfather

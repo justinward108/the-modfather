@@ -141,7 +141,7 @@ sudo systemctl start modfather
 journalctl -u modfather -f             # watch the logs
 ```
 
-`install.sh` installs Python and Caddy (HTTPS certificates are automatic) and creates a `modfather` system user. The bot and dashboard run as one systemd service, and the database lives in `/opt/modfather/data/`. To update later, run `git pull && sudo bash deploy/update.sh`. It backs up the database, then restarts, and running games resume, deadlines included.
+`install.sh` installs Python and Caddy (HTTPS certificates are automatic) and creates a `modbot` system account (no login) to run the bot. Don't use `modbot` as your own login. The bot and dashboard run as one systemd service, and the database lives in `/opt/modfather/data/`. To update later, run `git pull && sudo bash deploy/update.sh`. It backs up the database, then restarts, and running games resume, deadlines included.
 
 Slash commands registered globally can take up to an hour to show up the first time. Set `DEV_GUILD_ID` to your server's id for instant registration while testing.
 
